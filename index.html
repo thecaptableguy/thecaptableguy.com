@@ -54,11 +54,14 @@
 		<dialog id="cta" onclose="console.log(document.forms['contact_email'].elements['contact_email'].value);">
 			<h5>Request a free one hour consultation</h5>
 			<div>Give us an email where you would like to be reached for a one hour free consultation</div>
-			<form id="contact_email" class="right-align no-space" method="dialog">
-				<label for="contact_email">your email</label>
-				<input type="email" name="contact_email">
+			<form name="contact_email" method="dialog">
+				<div class="field label border">
+					<input type="email" name="contact_email" required>
+					<label>your email</label>
+				</div>
+
 				<button autofocus type="submit" value="confirm">Confirm</button>
-				<button type="submit" value="cancel" class="transparent link">Cancel</button>
+				<button type="submit" formnovalidate value="cancel" class="transparent link">Cancel</button>
 			</form>
 		</dialog>
 	</main>
