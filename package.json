@@ -14,7 +14,7 @@
   },
   "scripts": {
     "deploy-ghp": "bun run bundle && git subtree push --prefix=dist/ origin gh-pages",
-    "dev": "bun --watch ./src/**/*.html",
-    "bundle": "bun run ./build.ts"
+    "dev": "bun run --watch --console ./src/*.html ./src/**/*.html",
+    "bundle": "rm -rf ./dist/* && bun run ./build.ts"
   }
 }
