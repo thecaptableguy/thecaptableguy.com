@@ -13,6 +13,7 @@
     "typescript": "^5"
   },
   "scripts": {
-    "deploy-ghp": "git subtree push --prefix=dist/ origin gh-pages"
+    "deploy-ghp": "git subtree push --prefix=dist/ origin gh-pages",
+    "dev": "bun --watch ./src/**/*.html"
   }
 }
