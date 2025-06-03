@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "thecaptableguy.com",
-  "module": "build.ts",
+  "module": "bundle.ts",
   "type": "module",
   "devDependencies": {
     "@types/bun": "^1.2.15",
@@ -15,6 +15,6 @@
   "scripts": {
     "deploy-ghp": "bun run bundle && git subtree push --prefix=dist/ origin gh-pages",
     "dev": "bun run --watch --console ./src/*.html ./src/**/*.html",
-    "bundle": "rm -rf ./dist/* && bun run ./build.ts"
+    "bundle": "rm -rf ./dist/* && bun run ./bundle.ts"
   }
 }
