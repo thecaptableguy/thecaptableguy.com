@@ -1,16 +1,23 @@
 import bun_plugin_tailwind from "bun-plugin-tailwind"
+import { readdirSync } from "node:fs";
+import path from "node:path";
 
-import { readdir } from "node:fs/promises";
-import path from 'node:path';
-
-const srcFiles = (await readdir('./src/', { recursive: true }))
-    .map(file => path.resolve('./src', file));
+const srcFiles = readdirSync('./src', { recursive: true, withFileTypes: true })
+    .filter(dirent => dirent.isFile() && dirent.name.endsWith('.html'))
+    .map(file => path.join(file.parentPath, file.name));
 
 await Bun.build({
-    target: "browser",
+
     entrypoints: srcFiles,
     outdir: "./dist",
+    packages: "bundle",
+    naming: {
+        // entry: '[dir]/[name].[ext]',
+        // asset: '[name]-[hash].[ext]',
+        chunk: '[dir]/[name]-[hash].[ext]'
+    },
+    target: "browser",
     minify: true,
-    //splitting: true,
+    splitting: true,
     plugins: [bun_plugin_tailwind],
 });
