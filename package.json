@@ -11,5 +11,8 @@
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "scripts": {
+    "deploy-ghp": "git subtree push --prefix=dist/ origin gh-pages"
   }
 }
