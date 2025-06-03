@@ -1,88 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="shortcut icon" href="/favicon.png" type="image/png">
-	<title>The Cap Table Guy - Homepage</title>
-	<link href="https://cdn.jsdelivr.net/npm/beercss@3.11.1/dist/cdn/beer.min.css" rel="stylesheet">
-	<script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.11.1/dist/cdn/beer.min.js"></script>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="shortcut icon" href="favicon.png" type="image/png">
+		<title>The Cap Table Guy - Homepage</title>
+		<link href="styles.css" rel="stylesheet" type="text/css">
+	</head>
 
-<body class="light">
+	<body class="light">
 
-	<header class="responsive">
-		<nav class="large-space">
-			<a class="max left-align left-margin" href="/">
-				<img class="square margin" src="/favicon.png">
-				<h5>The Cap Table Guy</h5>
-			</a>
-			<a class="right-margin" href="/blog">
-				<i>dashboard</i>
-				<div>blog</div>
-			</a>
-			<a class="right-margin" href="/contact">
-				<i>email</i>
-				<div>contact</div>
-			</a>
-			<a class="right-margin" href="/about">
-				<i>info</i>
-				<div>about</div>
-			</a>
-		</nav>
-	</header>
+		<header class="responsive">
+			<nav class="large-space">
+				<a class="max left-align left-margin" href="/">
+					<img class="square margin" src="favicon.png">
+					<h5>The Cap Table Guy</h5>
+				</a>
+				<a class="right-margin" href="/blog">
+					<i>dashboard</i>
+					<div>blog</div>
+				</a>
+				<a class="right-margin" href="/contact">
+					<i>email</i>
+					<div>contact</div>
+				</a>
+				<a class="right-margin" href="/about">
+					<i>info</i>
+					<div>about</div>
+				</a>
+			</nav>
+		</header>
 
-	<main class="responsive">
-		<article class="no-round no-elevate no-padding">
-			<img class="responsive" src="/hero-black.jpeg">
-			<div class="absolute margin middle large-padding white-text small-blur top-shadow">
-				<h1 class="max">Ask The Cap Table Guy</h1>
-				<h2>
-					the first hour is free
-				</h2>
-				<p class="large-width large-text medium-line">
-					With deep expertise in structuring, modeling, and optimizing ownership stakes, Bob has helped
-					hundreds of startups,
-					investors, and executives navigate complex equity scenarios with confidence.
+		<main class="responsive">
+			<article class="no-round no-elevate no-padding">
+				<img class="responsive" src="hero-black.jpeg">
+				<div class="absolute margin middle large-padding white-text small-blur top-shadow">
+					<h1 class="max">Ask The Cap Table Guy</h1>
+					<h2>
+						the first hour is free
+					</h2>
+					<p class="large-width large-text medium-line">
+						With deep expertise in structuring, modeling, and optimizing ownership stakes, Bob has helped
+						hundreds of startups,
+						investors, and executives navigate complex equity scenarios with confidence.
 
-					Whether you're fundraising, managing dilution, or planning an exit, Bob provides the strategic
-					guidance needed to
-					maximize value and avoid costly mistakes.
+						Whether you're fundraising, managing dilution, or planning an exit, Bob provides the strategic
+						guidance needed to
+						maximize value and avoid costly mistakes.
 
-					When precision matters, trust the expert who has seen it all—because every percentage point counts.
-				</p>
-				<nav class="left-align">
-					<button class="extra" onclick="document.querySelector('#cta').showModal();">
-						I want a free consultation
-					</button>
-					<a href="/printable.html">
-						<button class="border extra">
-							download a whitepaper
+						When precision matters, trust the expert who has seen it all—because every percentage point
+						counts.
+					</p>
+					<nav class="left-align">
+						<button class="extra" onclick="document.querySelector('#cta').showModal();">
+							I want a free consultation
 						</button>
-					</a>
-				</nav>
-			</div>
-		</article>
-		<dialog id="cta" onclose="console.log(document.forms['contact_email'].elements['contact_email'].value);">
-			<h5>Request a free one hour consultation</h5>
-			<div>Give us an email where you would like to be reached for a one hour free consultation</div>
-			<form name="contact_email" method="dialog">
-				<div class="field label border">
-					<input type="email" name="contact_email" required>
-					<label>your email</label>
+						<a href="/printable.html">
+							<button class="border extra">
+								download a whitepaper
+							</button>
+						</a>
+					</nav>
 				</div>
+			</article>
+			<dialog id="cta" onclose="console.log(document.forms['contact_email'].elements['contact_email'].value);">
+				<h5>Request a free one hour consultation</h5>
+				<div>Give us an email where you would like to be reached for a one hour free consultation</div>
+				<form name="contact_email" method="dialog">
+					<div class="field label border">
+						<input type="email" name="contact_email" required>
+						<label>your email</label>
+					</div>
 
-				<button autofocus type="submit" value="confirm">Confirm</button>
-				<button type="submit" formnovalidate value="cancel" class="transparent link">Cancel</button>
-			</form>
-		</dialog>
-	</main>
+					<button autofocus type="submit" value="confirm">Confirm</button>
+					<button type="submit" formnovalidate value="cancel" class="transparent link">Cancel</button>
+				</form>
+			</dialog>
+		</main>
 
-	<footer class="responsive">
-		Footer
-	</footer>
-</body>
+		<footer class="responsive">
+			Footer
+		</footer>
+	</body>
 
 </html>
