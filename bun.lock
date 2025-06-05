@@ -4,7 +4,7 @@
     "": {
       "name": "thecaptableguy.com",
       "devDependencies": {
-        "@types/bun": "latest",
+        "@types/bun": "^1.2.15",
         "bun-plugin-tailwind": "^0.0.15",
         "daisyui": "^5.0.43",
         "tailwindcss": "^4.1.8",
