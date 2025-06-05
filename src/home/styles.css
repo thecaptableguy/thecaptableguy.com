@@ -1,2 +1,263 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+/* Professional Finance Consultant Color Palette */
+:root {
+    --color-base-100: oklch(98% 0.01 220);
+    /* Light Steel Blue */
+    --color-base-200: oklch(94% 0.02 220);
+    /* Lighter Steel Blue */
+    --color-base-300: oklch(88% 0.03 220);
+    /* Light Grayish Blue */
+    --color-base-content: oklch(20% 0.02 230);
+    /* Dark Slate Blue */
+
+    --color-primary: oklch(40% 0.15 250);
+    /* Deep Indigo */
+    --color-primary-content: oklch(99% 0.01 250);
+    /* Off-white */
+
+    --color-secondary: oklch(55% 0.1 200);
+    /* Muted Teal */
+    --color-secondary-content: oklch(99% 0.01 200);
+    /* Off-white */
+
+    --color-accent: oklch(65% 0.12 170);
+    /* Soft Cyan/Green */
+    --color-accent-content: oklch(15% 0.02 170);
+    /* Dark Greenish Blue */
+
+    --color-neutral: oklch(30% 0.03 230);
+    /* Dark Grayish Blue */
+    --color-neutral-content: oklch(95% 0.01 230);
+    /* Light Gray */
+
+    --color-info: oklch(60% 0.15 230);
+    /* Bright Blue */
+    --color-info-content: oklch(99% 0.01 230);
+
+    --color-success: oklch(50% 0.18 145);
+    /* Forest Green */
+    --color-success-content: oklch(99% 0.01 145);
+
+    --color-warning: oklch(70% 0.15 85);
+    /* Amber */
+    --color-warning-content: oklch(20% 0.05 85);
+
+    --color-error: oklch(50% 0.2 25);
+    /* Deep Red */
+    --color-error-content: oklch(99% 0.01 25);
+}
+
+/* Custom professional enhancements */
+.hero {
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    color: var(--color-primary-content);
+    /* Changed to light color for hero text */
+}
+
+.hero-content .text-primary {
+    color: oklch(95% 0.05 250) !important;
+    /* Very light, slightly blueish for H1 */
+}
+
+.hero-content .text-secondary {
+    color: oklch(95% 0.05 200) !important;
+    /* Very light, slightly tealish for span in H1 */
+}
+
+.hero-content .text-base-content\/80 {
+    color: oklch(from var(--color-primary-content) l c h / 0.9) !important;
+    /* Lighter, less transparent */
+}
+
+.hero-content .text-base-content\/70 {
+    color: oklch(from var(--color-primary-content) l c h / 0.8) !important;
+    /* Lighter, less transparent */
+}
+
+/* Ensure outline button in hero has light text and border */
+.hero-content .btn-outline.btn-primary {
+    color: var(--color-primary-content) !important;
+    border-color: var(--color-primary-content) !important;
+}
+
+/* Optional: Adjust hover for outline button in hero if default is not desired, otherwise default hover is fine */
+/* .hero-content .btn-outline.btn-primary:hover {
+    background-color: var(--color-primary-content) !important;
+    color: var(--color-primary) !important;
+    border-color: var(--color-primary-content) !important;
+} */
+
+/* Enhanced button styles */
+.btn-primary {
+    background: linear-gradient(135deg,
+            var(--color-primary) 0%,
+            oklch(from var(--color-primary) l c h / 0.8) 100%);
+    /* Slightly darker gradient end */
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px oklch(from var(--color-primary) l c h / 0.3);
+    /* Softer shadow */
+}
+
+.btn-outline {
+    border: 2px solid var(--color-primary);
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px -4px oklch(from var(--color-primary) l c h / 0.2);
+    /* Softer shadow */
+}
+
+/* Typography improvements */
+h1 {
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+}
+
+/* Stats styling */
+.stats {
+    border-radius: 1rem;
+    border: 1px solid var(--color-base-300);
+    /* Use new base-300 */
+    background-color: oklch(from var(--color-base-100) l c h / 0.85);
+    /* Slightly transparent base */
+}
+
+.stat-title {
+    font-weight: 600;
+    color: oklch(from var(--color-base-content) l c h / 0.7);
+    /* Slightly muted */
+    font-size: 0.875rem;
+}
+
+.stat-value {
+    font-weight: 800;
+    font-size: 2rem;
+    color: var(--color-primary);
+    /* Primary color for stat values */
+}
+
+.stat-desc {
+    color: oklch(from var(--color-base-content) l c h / 0.6);
+    /* More muted */
+    font-size: 0.875rem;
+}
+
+/* Card enhancements */
+.card {
+    border-radius: 1rem;
+    border: 1px solid var(--color-base-300);
+    /* Use new base-300 */
+    background-color: oklch(from var(--color-base-100) l c h / 0.85);
+    /* Slightly transparent base */
+    backdrop-filter: blur(8px);
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: var(--color-primary);
+    /* Primary color for card titles */
+}
+
+/* Dark background for stats and cards in hero section */
+.hero-content .stats {
+    background-color: oklch(15% 0.02 230 / 0.9) !important;
+    border: 1px solid oklch(40% 0.05 230 / 0.3);
+}
+
+.hero-content .stat-title {
+    color: oklch(80% 0.02 240);
+}
+
+.hero-content .stat-value {
+    color: oklch(85% 0.12 170);
+}
+
+.hero-content .stat-desc {
+    color: oklch(70% 0.02 240);
+}
+
+.hero-content .stat-figure {
+    color: oklch(85% 0.12 170) !important;
+}
+
+.hero-content .card {
+    background-color: oklch(15% 0.02 230 / 0.9) !important;
+    border: 1px solid oklch(40% 0.05 230 / 0.3);
+}
+
+.hero-content .card-title {
+    color: oklch(85% 0.12 170) !important;
+}
+
+.hero-content .card-body ul li span {
+    color: oklch(80% 0.02 240) !important;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content {
+        padding: 1.5rem;
+    }
+
+    .stats {
+        transform: scale(0.9);
+    }
+}
+
+/* Animation enhancements */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content>div {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-content>div>div:nth-child(2) {
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+}
+
+/* Professional gradient backgrounds */
+.bg-gradient-to-br {
+    background-image: linear-gradient(135deg,
+            oklch(99% 0.01 240) 0%,
+            oklch(96% 0.02 240) 100%);
+}
+
+/* Backdrop blur support */
+.backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+}
