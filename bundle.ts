@@ -3,11 +3,11 @@ import { readdirSync } from "node:fs";
 import path from "node:path";
 
 const srcFiles = readdirSync('./src', { recursive: true, withFileTypes: true })
-    .filter(dirent => dirent.isFile() && dirent.name.endsWith('.html'))
+    .filter(dirent => dirent.isFile())//&& dirent.name.endsWith('.html'))
     .map(file => path.join(file.parentPath, file.name));
 
 await Bun.build({
-
+    root: "./src",
     entrypoints: srcFiles,
     outdir: "./dist",
     packages: "bundle",
