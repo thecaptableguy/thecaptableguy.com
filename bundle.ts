@@ -13,8 +13,8 @@ await Bun.build({
     packages: "bundle",
     naming: {
         // entry: '[dir]/[name].[ext]',
-        asset: '[dir]/[name]-[hash].[ext]',
-        chunk: '[dir]/[name]-[hash].[ext]'
+        asset: '[dir]/[name].[ext]',
+        chunk: '[dir]/[name].[ext]'
     },
     target: "browser",
     minify: true,
