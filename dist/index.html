@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>The Cap Table Guy - Homepage</title>
+		<link rel="shortcut icon" href="favicon.png" type="image/png">
+		
+	<link rel="stylesheet" crossorigin href="././index-y5qxmkag.css"><script type="module" crossorigin src="././index-47hn5xqk.js"></script></head>
+
+	<body>
+
+		<header>
+			<nav class="navbar bg-base-100">
+				<div class="navbar-start">
+					<a class="btn btn-ghost text-xl" href="/">
+						<img class="w-8 h-8 mr-2" src="./assets/logo-7fbjbm72.png" alt="Logo">
+						The Cap Table Guy
+					</a>
+				</div>
+				<div class="navbar-end">
+					<a class="btn btn-ghost" href="/blog">
+						<span>blog</span>
+					</a>
+					<a class="btn btn-ghost" href="/contact">
+						<span>contact</span>
+					</a>
+					<a class="btn btn-ghost" href="/about">
+						<span>about</span>
+					</a>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<div class="hero min-h-screen" style="background-image: url('/assets/hero-white.jpeg');">
+				<div class="hero-overlay bg-opacity-40"></div>
+				<div class="hero-content text-center text-neutral-content">
+					<div class="max-w-4xl">
+						<h1 class="mb-5 text-5xl font-bold">Ask The Cap Table Guy</h1>
+						<h2 class="mb-5 text-3xl">
+							the first hour is free
+						</h2>
+						<p class="mb-8 text-lg leading-relaxed">
+							With deep expertise in structuring, modeling, and optimizing ownership stakes, Bob has
+							helped
+							hundreds of startups,
+							investors, and executives navigate complex equity scenarios with confidence.
+
+							Whether you're fundraising, managing dilution, or planning an exit, Bob provides the
+							strategic
+							guidance needed to
+							maximize value and avoid costly mistakes.
+
+							When precision matters, trust the expert who has seen it all—because every percentage point
+							counts.
+						</p>
+						<div class="flex flex-col sm:flex-row gap-4 justify-center">
+							<button class="btn btn-primary btn-lg"
+								onclick="document.querySelector('#cta').showModal();">
+								I want a free consultation
+							</button>
+							<a href="/whitepaper">
+								<button class="btn btn-outline btn-lg">
+									download a whitepaper
+								</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<dialog id="cta" class="modal"
+				onclose="console.log(document.forms['contact_email'].elements['contact_email'].value);">
+				<div class="modal-box">
+					<h3 class="font-bold text-lg">Request a free one hour consultation</h3>
+					<p class="py-4">Give us an email where you would like to be reached for a one hour free consultation
+					</p>
+					<form name="contact_email" method="dialog">
+						<label class="input input-bordered flex items-center gap-2">
+							<input type="email" name="contact_email" class="grow" placeholder="your email" required>
+						</label>
+						<div class="modal-action">
+							<button autofocus type="submit" value="confirm" class="btn btn-primary">Confirm</button>
+							<button type="submit" formnovalidate value="cancel" class="btn">Cancel</button>
+						</div>
+					</form>
+				</div>
+			</dialog>
+		</main>
+
+		<footer class="footer footer-center p-4 bg-base-300 text-base-content">
+			<div>
+				<p>Footer</p>
+			</div>
+		</footer>
+	</body>
+
+</html>
