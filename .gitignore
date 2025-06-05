@@ -1,11 +1,6 @@
 # dependencies (bun install)
 node_modules
 
-# output
-out
-dist
-*.tgz
-
 # code coverage
 coverage
 *.lcov
@@ -34,5 +29,5 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 .DS_Store
 
 # GitHub Pages specific files
-.nojekill
+.nojekyll
 CNAME

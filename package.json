@@ -13,7 +13,7 @@
     "typescript": "^5"
   },
   "scripts": {
-    "deploy-ghp": "bun run bundle && git subtree push --prefix=dist/ origin gh-pages",
+    "deploy-ghp": "bun run bundle && git subtree push --prefix=dist origin gh-pages",
     "dev": "bun run --watch --console ./src/*.html ./src/**/*.html",
     "bundle": "rm -rf ./dist/* && bun run ./bundle.ts"
   }
