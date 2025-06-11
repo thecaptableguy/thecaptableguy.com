@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@plugin "../.tailwind/daisyui.js";
+@plugin "../.dev/daisyui.js";
 
 @theme {
     --font-display: "Satoshi", "sans-serif";
