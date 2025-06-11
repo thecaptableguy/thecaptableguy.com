@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
     } else {
         // --- Email sending logic ---
         // Replace 'your_email@example.com' with the email address where you want to receive messages
-        $to = 'your_email@example.com';
+        $to = 'bob@thecaptableguy.com';
         $email_subject = "Contact Form: $subject";
         $email_body = "You have received a new message from your website contact form.\n\n" .
                       "Here are the details:\n\n" .

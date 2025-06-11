@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "thecaptableguy.com",
+  "name": "captableexpert.com",
   "module": "bundle.ts",
   "type": "module",
   "devDependencies": {
@@ -16,7 +16,6 @@
   "scripts": {
     "deploy-ghp": "git add ./dist && git commit -m'automatic commit of the dist directory' && git push && git subtree split -P dist -b build-tmp && git push gh-pages build-tmp:gh-pages --force && git subtree push --prefix dist gh-pages gh-pages && git branch -D build-tmp",
     "dev": "bun run --watch --console ./src/*.html ./src/**/*.html",
-    "bundle": "rm -rf ./dist/* && cp ./CNAME ./.nojekyll ./dist/ && bun run ./bundle.ts",
-    "tw": "bunx --bun @tailwindcss/cli -i ./src/home/styles.css -o ./src/home/styles_twcss.css"
+    "bundle": "rm -rf ./dist/* && cp ./CNAME ./.nojekyll ./dist/ && bun run ./bundle.ts"
   }
 }
