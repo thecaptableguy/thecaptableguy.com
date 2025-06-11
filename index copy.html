@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>The Cap Table Guy - Homepage</title>
+
+		<!--
+		<link rel="shortcut icon" href="/static/favicon.png" type="image/png">
+		<link rel="stylesheet" href="/static/styles.css">
+		-->
+		<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+	</head>
+
+	<body>
+		<header class="navbar bg-base-100 shadow-sm">
+			<div class="navbar-start">
+				<a class="btn btn-ghost text-xl font-semibold" href="/">
+					<img class="w-8 h-8 mr-2" src="/static/logo.png" alt="The Cap Table Guy Logo">
+					The Cap Table Guy
+				</a>
+			</div>
+			<div class="navbar-end">
+				<div class="hidden sm:flex">
+					<a class="btn btn-ghost" href="/blog">Blog</a>
+					<a class="btn btn-ghost" href="/contact">Contact</a>
+					<a class="btn btn-ghost" href="/about">About</a>
+				</div>
+				<div class="dropdown dropdown-end sm:hidden">
+					<div tabindex="0" role="button" class="btn btn-ghost">
+						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+								d="M4 6h16M4 12h16M4 18h16"></path>
+						</svg>
+					</div>
+					<ul tabindex="0" class="dropdown-content menu bg-base-200 rounded-box z-[1] w-52 p-2 shadow">
+						<li><a href="/blog">Blog</a></li>
+						<li><a href="/contact">Contact</a></li>
+						<li><a href="/about">About</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero min-h-screen bg-gradient-to-br from-base-100 to-base-200 relative overflow-hidden">
+				<div class="hero-overlay bg-black bg-opacity-75 absolute inset-0"></div>
+				<img src="/static/hero-black.jpeg" alt="Financial consultation background with dark overlay"
+					class="absolute inset-0 w-full h-full object-cover" />
+
+				<div class="hero-content container mx-auto px-6 relative z-10 text-base-content">
+					<div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl">
+						<!-- Left Column - Content -->
+						<div class="text-left space-y-6">
+							<div class="space-y-4">
+								<h1 class="text-4xl lg:text-6xl font-bold text-primary leading-tight">
+									Expert Cap Table
+									<span class="text-secondary block">Consultation</span>
+								</h1>
+								<p class="text-xl lg:text-2xl text-base-content/80 font-medium">
+									Your first hour is completely free
+								</p>
+							</div>
+
+							<div class="w-16 h-1 bg-accent rounded-full"></div>
+
+							<p class="text-lg text-base-content/70 leading-relaxed max-w-xl">
+								With deep expertise in structuring, modeling, and optimizing ownership stakes,
+								Bob has helped hundreds of startups, investors, and executives navigate complex
+								equity scenarios with confidence and precision.
+							</p>
+
+							<div class="flex flex-col sm:flex-row gap-4 pt-4">
+								<button
+									class="btn btn-primary btn-lg shadow-lg hover:shadow-xl transition-all duration-300"
+									onclick="document.querySelector('#cta').showModal();">
+									<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+											d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+										</path>
+									</svg>
+									Schedule Free Consultation
+								</button>
+								<a href="/whitepaper"
+									class="btn btn-outline btn-primary btn-lg hover:shadow-lg transition-all duration-300">
+									<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+											d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2z">
+										</path>
+									</svg>
+									Download Whitepaper
+								</a>
+							</div>
+						</div>
+
+						<!-- Right Column - References -->
+						<div class="lg:text-right space-y-8">
+							<div
+								class="stats stats-vertical lg:stats-horizontal shadow-lg bg-base-100/90 backdrop-blur-sm">
+								<div class="stat">
+									<div class="stat-figure text-primary">
+										<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+												d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+											</path>
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+												d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+										</svg>
+									</div>
+									<div class="stat-title">Companies Helped</div>
+									<div class="stat-value text-primary">500+</div>
+									<div class="stat-desc">Successful consultations</div>
+								</div>
+
+								<div class="stat">
+									<div class="stat-figure text-secondary">
+										<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+												d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+										</svg>
+									</div>
+									<div class="stat-title">Years Experience</div>
+									<div class="stat-value text-secondary">15+</div>
+									<div class="stat-desc">In equity structuring</div>
+								</div>
+							</div>
+
+							<div class="card bg-base-100/90 backdrop-blur-sm shadow-lg">
+								<div class="card-body">
+									<h3 class="card-title text-primary">Why Choose Bob?</h3>
+									<ul class="space-y-3 text-sm">
+										<li class="flex items-start gap-2">
+											<svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="none"
+												stroke="currentColor" viewBox="0 0 24 24">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+													d="M5 13l4 4L19 7"></path>
+											</svg>
+											<span>Expert in fundraising and dilution management</span>
+										</li>
+										<li class="flex items-start gap-2">
+											<svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="none"
+												stroke="currentColor" viewBox="0 0 24 24">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+													d="M5 13l4 4L19 7"></path>
+											</svg>
+											<span>Strategic guidance for exit planning</span>
+										</li>
+										<li class="flex items-start gap-2">
+											<svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="none"
+												stroke="currentColor" viewBox="0 0 24 24">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+													d="M5 13l4 4L19 7"></path>
+											</svg>
+											<span>Proven track record with startups & investors</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<dialog id="cta" class="modal">
+				<div class="modal-box">
+					<h3 class="text-lg font-bold">Hello!</h3>
+					<p class="py-4">Press ESC key or click the button below to close</p>
+					<div class="modal-action">
+						<form method="dialog">
+							<button class="btn">Close</button>
+						</form>
+					</div>
+				</div>
+			</dialog>
+		</main>
+
+		<footer class="footer footer-center p-4 bg-base-300 text-base-content">
+			<nav>
+				<p class="font-semibold">&copy; 2024 The Cap Table Guy. All rights reserved.</p>
+				<ul class="flex gap-4 mt-2 justify-center">
+					<li><a class="link link-hover" href="/blog">Blog</a></li>
+					<li><a class="link link-hover" href="/contact">Contact</a></li>
+					<li><a class="link link-hover" href="/about">About</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</body>
+
+</html>

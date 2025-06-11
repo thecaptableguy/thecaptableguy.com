@@ -1,185 +1,479 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="bobthere">
 
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>The Cap Table Guy - Homepage</title>
-		<link rel="shortcut icon" href="/static/favicon.png" type="image/png">
-		<link rel="stylesheet" href="/static/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Bob the Cap Table Expert - Free 1-Hour Consultation</title>
+		<meta name="description"
+			content="Get expert cap table advice from Bob. Book your free one-hour consultation and avoid costly equity mistakes.">
+
+		<link href="/static/styles.css" rel="stylesheet" type="text/css" />
 	</head>
 
 	<body>
-		<header class="navbar bg-base-100 shadow-sm">
+		<!-- Navigation -->
+		<div class="navbar bg-base-100 border-b border-base-300">
 			<div class="navbar-start">
-				<a class="btn btn-ghost text-xl font-semibold" href="/">
-					<img class="w-8 h-8 mr-2" src="/static/logo.png" alt="The Cap Table Guy Logo">
-					The Cap Table Guy
-				</a>
+				<div class="flex items-center gap-3">
+					<div class="avatar">
+						<div class="w-10 rounded bg-primary text-primary-content">
+							<div class="flex items-center justify-center h-full">
+								<span class="text-sm font-semibold">BR</span>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="text-lg font-semibold text-base-content">Bob Richardson, CPA</div>
+						<div class="text-xs text-base-content/60">Cap Table Specialist</div>
+					</div>
+				</div>
+			</div>
+			<div class="navbar-center hidden lg:flex">
+				<ul class="menu menu-horizontal px-1 text-sm">
+					<li><a class="text-base-content/70 hover:text-primary">Services</a></li>
+					<li><a class="text-base-content/70 hover:text-primary">About</a></li>
+					<li><a class="text-base-content/70 hover:text-primary">Resources</a></li>
+				</ul>
 			</div>
 			<div class="navbar-end">
-				<div class="hidden sm:flex">
-					<a class="btn btn-ghost" href="/blog">Blog</a>
-					<a class="btn btn-ghost" href="/contact">Contact</a>
-					<a class="btn btn-ghost" href="/about">About</a>
-				</div>
-				<div class="dropdown dropdown-end sm:hidden">
-					<div tabindex="0" role="button" class="btn btn-ghost">
-						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-								d="M4 6h16M4 12h16M4 18h16"></path>
-						</svg>
+				<a href="#booking" class="btn btn-primary btn-sm">Book Consultation</a>
+			</div>
+		</div>
+
+		<!-- Hero Section -->
+		<div class="hero min-h-screen bg-base-100">
+			<div class="hero-content flex-col lg:flex-row-reverse max-w-7xl px-4 gap-12">
+				<!-- Right side - Excel-like Spreadsheet -->
+				<div class="flex-1 lg:max-w-2xl perspective-distant">
+					<!-- Excel Window Frame -->
+					<div
+						class="bg-base-100 shadow-xl border border-base-300 rounded-lg overflow-hidden transform-3d rotate-x-15 -rotate-y-4 rotate-z-6">
+						<!-- Excel Title Bar -->
+						<div class="bg-base-200 border-b border-base-300 px-4 py-2 flex items-center justify-between">
+							<div class="flex items-center gap-2">
+								<div class="flex gap-1">
+									<div class="w-3 h-3 rounded-full bg-primary"></div>
+									<div class="w-3 h-3 rounded-full bg-secondary"></div>
+									<div class="w-3 h-3 rounded-full bg-base-300"></div>
+								</div>
+								<span class="text-sm font-medium text-base-content ml-2">Microsoft Excel -
+									CapTable.xlsx</span>
+							</div>
+							<div class="text-xs text-base-content/50">●</div>
+						</div>
+
+						<!-- Excel Menu Bar -->
+						<div class="bg-base-100 border-b border-base-200 px-4 py-1">
+							<div class="flex text-xs text-base-content/60 gap-6">
+								<span class="text-primary font-medium">File</span>
+								<span>Home</span>
+								<span>Insert</span>
+								<span>Data</span>
+								<span>Formulas</span>
+							</div>
+						</div>
+
+						<!-- Excel Toolbar -->
+						<div class="bg-base-200 border-b border-base-200 px-4 py-2">
+							<div class="flex items-center gap-4 text-xs text-base-content/60">
+								<div class="flex gap-1">
+									<div class="w-6 h-6 bg-base-300 rounded border"></div>
+									<div class="w-6 h-6 bg-base-300 rounded border"></div>
+									<div class="w-6 h-6 bg-base-300 rounded border"></div>
+								</div>
+								<span class="text-base-content/40">|</span>
+								<div class="bg-base-100 border border-base-300 px-2 py-1 rounded text-xs">Arial</div>
+								<div class="bg-base-100 border border-base-300 px-2 py-1 rounded text-xs">11</div>
+							</div>
+						</div>
+
+						<!-- Excel Spreadsheet Content -->
+						<div class="bg-base-100">
+							<!-- Column Headers -->
+							<div class="grid grid-cols-5 border-b border-base-300">
+								<div
+									class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/70">
+								</div>
+								<div
+									class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/70">
+									A</div>
+								<div
+									class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/70">
+									B</div>
+								<div
+									class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/70">
+									C</div>
+								<div class="bg-base-200 px-3 py-2 text-center text-xs font-medium text-base-content/70">
+									D</div>
+							</div>
+
+							<!-- Row 1 - Headers -->
+							<div class="grid grid-cols-5 border-b border-base-200">
+								<div
+									class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">
+									1</div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs font-semibold text-base-content">
+									Shareholder</div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs font-semibold text-base-content">
+									Shares</div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs font-semibold text-base-content">
+									Ownership %</div>
+								<div class="px-3 py-2 text-xs font-semibold text-base-content">Value</div>
+							</div>
+
+							<!-- Row 2 -->
+							<div class="grid grid-cols-5 border-b border-base-200">
+								<div
+									class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">
+									2</div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">John Doe
+									(Founder)
+								</div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">4,500,000
+								</div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">45.0%</div>
+								<div class="px-3 py-2 text-xs text-base-content/70">$4,500,000</div>
+							</div>
+
+							<!-- Row 3 -->
+							<div class="grid grid-cols-5 border-b border-base-200">
+								<div
+									class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">
+									3</div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">Jane Smith
+									(Co-founder)</div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">3,500,000
+								</div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">35.0%</div>
+								<div class="px-3 py-2 text-xs text-base-content/70">$3,500,000</div>
+							</div>
+
+							<!-- Row 4 -->
+							<div class="grid grid-cols-5 border-b border-base-200">
+								<div
+									class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">
+									4</div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">Venture
+									Capital
+									LLC</div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">1,500,000
+								</div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">15.0%</div>
+								<div class="px-3 py-2 text-xs text-base-content/70">$1,500,000</div>
+							</div>
+
+							<!-- Row 5 -->
+							<div class="grid grid-cols-5 border-b border-base-200">
+								<div
+									class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">
+									5</div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">Employee
+									Pool
+								</div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">500,000
+								</div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">5.0%</div>
+								<div class="px-3 py-2 text-xs text-base-content/70">$500,000</div>
+							</div>
+
+							<!-- Row 6 - Empty -->
+							<div class="grid grid-cols-5 border-b border-base-200">
+								<div
+									class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">
+									6</div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/30"></div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/30"></div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/30"></div>
+								<div class="px-3 py-2 text-xs text-base-content/30"></div>
+							</div>
+
+							<!-- Row 7 - Total -->
+							<div class="grid grid-cols-5 border-b border-base-200 bg-base-200">
+								<div
+									class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">
+									7</div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs font-semibold text-base-content">
+									TOTAL</div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs font-semibold text-base-content">
+									10,000,000</div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs font-semibold text-base-content">
+									100.0%</div>
+								<div class="px-3 py-2 text-xs font-semibold text-base-content">$10,000,000</div>
+							</div>
+
+							<!-- Additional empty rows -->
+							<div class="grid grid-cols-5 border-b border-base-200">
+								<div
+									class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">
+									8</div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/30"></div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/30"></div>
+								<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/30"></div>
+								<div class="px-3 py-2 text-xs text-base-content/30"></div>
+							</div>
+						</div>
+
+						<!-- Excel Status Bar -->
+						<div class="bg-base-200 border-t border-base-300 px-4 py-1 flex items-center justify-between">
+							<div class="text-xs text-base-content/60">Ready</div>
+							<div class="text-xs text-base-content/60">Sum: $10,000,000</div>
+						</div>
 					</div>
-					<ul tabindex="0" class="dropdown-content menu bg-base-200 rounded-box z-[1] w-52 p-2 shadow">
-						<li><a href="/blog">Blog</a></li>
-						<li><a href="/contact">Contact</a></li>
-						<li><a href="/about">About</a></li>
-					</ul>
+				</div>
+
+				<!-- Left side - Content -->
+				<div class="flex-1 text-center lg:text-left">
+					<!-- Minimal Trust Indicators -->
+					<div class="flex flex-wrap justify-center lg:justify-start gap-3 mb-8">
+						<div class="text-xs text-base-content/70 bg-base-200 px-3 py-1 rounded-full">CPA Certified</div>
+						<div class="text-xs text-base-content/70 bg-base-200 px-3 py-1 rounded-full">Stanford MBA</div>
+						<div class="text-xs text-base-content/70 bg-base-200 px-3 py-1 rounded-full">15+ Years
+							Experience</div>
+					</div>
+
+					<h1 class="text-4xl lg:text-5xl font-bold text-base-content leading-tight mb-6">
+						Get Your Cap Table
+						<span class="text-primary">Right</span>
+						From Day One
+					</h1>
+
+					<p class="text-lg lg:text-xl mb-8 text-base-content/70 max-w-2xl mx-auto lg:mx-0">
+						Avoid the costly equity mistakes that derail startups. Get professional cap table structuring
+						advice from a certified expert who's helped 500+ companies.
+					</p>
+
+					<!-- Value Proposition -->
+					<div class="bg-base-200 border border-base-300 rounded-lg p-4 mb-8 max-w-lg mx-auto lg:mx-0">
+						<h3 class="font-semibold text-base-content mb-1">Free 1-Hour Professional Consultation</h3>
+						<div class="text-sm text-base-content/70">Usually $500/hour • No commitment required</div>
+					</div>
+
+					<!-- Main CTA -->
+					<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
+						<a href="#booking" class="btn btn-primary btn-lg">
+							📅 Schedule Free Consultation
+						</a>
+						<a href="#learn-more" class="btn btn-outline btn-primary btn-lg">
+							📄 View Case Studies
+						</a>
+					</div>
+
+					<!-- Minimal Social Proof Stats -->
+					<div class="flex flex-wrap justify-center lg:justify-start gap-8 text-center">
+						<div>
+							<div class="text-2xl font-bold text-primary">500+</div>
+							<div class="text-sm text-base-content/70">Companies Structured</div>
+						</div>
+						<div>
+							<div class="text-2xl font-bold text-primary">$2.1B+</div>
+							<div class="text-sm text-base-content/70">In Funding Raised</div>
+						</div>
+						<div>
+							<div class="text-2xl font-bold text-primary">98%</div>
+							<div class="text-sm text-base-content/70">Success Rate</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</header>
+		</div>
 
-		<main>
-			<section class="hero min-h-screen bg-gradient-to-br from-base-100 to-base-200 relative overflow-hidden">
-				<div class="hero-overlay bg-black bg-opacity-75 absolute inset-0"></div>
-				<img src="/static/hero-black.jpeg" alt="Financial consultation background with dark overlay"
-					class="absolute inset-0 w-full h-full object-cover" />
+		<!-- Problems Section -->
+		<div class="bg-base-200 py-20">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl font-bold mb-4 text-base-content">
+						Common Cap Table Mistakes That <span class="text-primary">Destroy</span> Startups
+					</h2>
+					<p class="text-lg text-base-content/70 max-w-2xl mx-auto">
+						These mistakes can cost you control of your company and millions in value
+					</p>
+				</div>
 
-				<div class="hero-content container mx-auto px-6 relative z-10 text-base-content">
-					<div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl">
-						<!-- Left Column - Content -->
-						<div class="text-left space-y-6">
-							<div class="space-y-4">
-								<h1 class="text-4xl lg:text-6xl font-bold text-primary leading-tight">
-									Expert Cap Table
-									<span class="text-secondary block">Consultation</span>
-								</h1>
-								<p class="text-xl lg:text-2xl text-base-content/80 font-medium">
-									Your first hour is completely free
-								</p>
+				<div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+					<div class="card bg-base-100 shadow-lg">
+						<div class="card-body text-center">
+							<div class="text-5xl mb-4">⚠️</div>
+							<h3 class="card-title justify-center text-xl mb-3 text-base-content">Wrong Founder Split
+							</h3>
+							<p class="text-base-content/70">
+								Unequal contributions without proper vesting can lead to disputes and unmotivated
+								co-founders
+							</p>
+						</div>
+					</div>
+
+					<div class="card bg-base-100 shadow-lg">
+						<div class="card-body text-center">
+							<div class="text-5xl mb-4">📉</div>
+							<h3 class="card-title justify-center text-xl mb-3 text-base-content">Excessive Dilution</h3>
+							<p class="text-base-content/70">
+								Poor planning leads to founders losing control and motivation before achieving success
+							</p>
+						</div>
+					</div>
+
+					<div class="card bg-base-100 shadow-lg">
+						<div class="card-body text-center">
+							<div class="text-5xl mb-4">⚖️</div>
+							<h3 class="card-title justify-center text-xl mb-3 text-base-content">Legal Complications
+							</h3>
+							<p class="text-base-content/70">
+								Incorrect structures create expensive legal problems that can derail fundraising
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- About Bob Section -->
+		<div class="py-20 bg-base-100">
+			<div class="container mx-auto px-4">
+				<div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+					<div class="text-center lg:text-left">
+						<h2 class="text-4xl font-bold mb-6 text-base-content">Meet Bob Richardson</h2>
+						<p class="text-lg mb-6 text-base-content/80">
+							Your trusted cap table expert with 15+ years of experience helping startups
+							structure their equity properly from day one.
+						</p>
+
+						<div class="space-y-4">
+							<div class="flex items-center gap-3">
+								<div class="badge badge-primary">✓</div>
+								<span class="text-base-content">Former VP Finance at 3 successful exits</span>
+							</div>
+							<div class="flex items-center gap-3">
+								<div class="badge badge-primary">✓</div>
+								<span class="text-base-content">500+ companies structured successfully</span>
+							</div>
+							<div class="flex items-center gap-3">
+								<div class="badge badge-primary">✓</div>
+								<span class="text-base-content">Expert in Series A-C fundraising</span>
+							</div>
+							<div class="flex items-center gap-3">
+								<div class="badge badge-primary">✓</div>
+								<span class="text-base-content">Stanford MBA & Certified CPA</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="text-center">
+						<div class="avatar">
+							<div class="w-80 rounded-full">
+								<img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+									alt="Bob Richardson" />
+							</div>
+						</div>
+						<div class="mt-6">
+							<h3 class="text-2xl font-bold text-base-content">Bob Richardson</h3>
+							<p class="text-primary text-lg">Cap Table Expert & Former VP Finance</p>
+							<div class="text-center">
+								<div class="badge badge-outline badge-primary border-primary/30 text-primary">Stanford
+									MBA</div>
+								<div class="badge badge-outline badge-primary border-primary/30 text-primary ml-2">CPA
+								</div>
+								<div class="badge badge-outline badge-primary border-primary/30 text-primary ml-2">15+
+									Years</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- CTA Section -->
+		<div id="booking" class="bg-primary text-primary-content py-20">
+			<div class="container mx-auto px-4 text-center">
+				<h2 class="text-4xl font-bold mb-6">
+					Get Your Free 1-Hour Consultation
+				</h2>
+				<p class="text-xl mb-12 text-primary-content/90 max-w-3xl mx-auto">
+					Don't make costly cap table mistakes. Get expert advice from Bob and structure
+					your equity properly from the start.
+				</p>
+
+				<div class="max-w-lg mx-auto">
+					<div class="card bg-base-100 text-base-content shadow-2xl">
+						<div class="card-body">
+							<h3 class="card-title justify-center text-2xl mb-6 text-base-content">
+								🎯 What You'll Get
+							</h3>
+
+							<div class="space-y-4 text-left mb-8">
+								<div class="flex items-center gap-3">
+									<div class="badge badge-primary">✓</div>
+									<span class="text-base-content">Complete cap table review & analysis</span>
+								</div>
+								<div class="flex items-center gap-3">
+									<div class="badge badge-primary">✓</div>
+									<span class="text-base-content">Equity structure recommendations</span>
+								</div>
+								<div class="flex items-center gap-3">
+									<div class="badge badge-primary">✓</div>
+									<span class="text-base-content">Fundraising preparation guidance</span>
+								</div>
+								<div class="flex items-center gap-3">
+									<div class="badge badge-primary">✓</div>
+									<span class="text-base-content">Common mistake prevention tips</span>
+								</div>
 							</div>
 
-							<div class="w-16 h-1 bg-accent rounded-full"></div>
+							<div class="text-center mb-6">
+								<div class="text-4xl font-bold text-primary">FREE</div>
+								<div class="text-sm text-base-content/60">
+									<span class="line-through">Usually $500/hour</span>
+								</div>
+							</div>
 
-							<p class="text-lg text-base-content/70 leading-relaxed max-w-xl">
-								With deep expertise in structuring, modeling, and optimizing ownership stakes,
-								Bob has helped hundreds of startups, investors, and executives navigate complex
-								equity scenarios with confidence and precision.
-							</p>
-
-							<div class="flex flex-col sm:flex-row gap-4 pt-4">
-								<button
-									class="btn btn-primary btn-lg shadow-lg hover:shadow-xl transition-all duration-300"
-									onclick="document.querySelector('#cta').showModal();">
-									<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-											d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
-										</path>
-									</svg>
-									Schedule Free Consultation
-								</button>
-								<a href="/whitepaper"
-									class="btn btn-outline btn-primary btn-lg hover:shadow-lg transition-all duration-300">
-									<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-											d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2z">
-										</path>
-									</svg>
-									Download Whitepaper
+							<div class="card-actions justify-stretch">
+								<a href="https://calendly.com/bob-captable/free-consultation"
+									class="btn btn-primary btn-lg btn-block" target="_blank">
+									📅 Book My Free Call Now
 								</a>
 							</div>
-						</div>
 
-						<!-- Right Column - References -->
-						<div class="lg:text-right space-y-8">
-							<div
-								class="stats stats-vertical lg:stats-horizontal shadow-lg bg-base-100/90 backdrop-blur-sm">
-								<div class="stat">
-									<div class="stat-figure text-primary">
-										<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-												d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-											</path>
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-												d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-										</svg>
-									</div>
-									<div class="stat-title">Companies Helped</div>
-									<div class="stat-value text-primary">500+</div>
-									<div class="stat-desc">Successful consultations</div>
-								</div>
-
-								<div class="stat">
-									<div class="stat-figure text-secondary">
-										<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-												d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-										</svg>
-									</div>
-									<div class="stat-title">Years Experience</div>
-									<div class="stat-value text-secondary">15+</div>
-									<div class="stat-desc">In equity structuring</div>
-								</div>
-							</div>
-
-							<div class="card bg-base-100/90 backdrop-blur-sm shadow-lg">
-								<div class="card-body">
-									<h3 class="card-title text-primary">Why Choose Bob?</h3>
-									<ul class="space-y-3 text-sm">
-										<li class="flex items-start gap-2">
-											<svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="none"
-												stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-													d="M5 13l4 4L19 7"></path>
-											</svg>
-											<span>Expert in fundraising and dilution management</span>
-										</li>
-										<li class="flex items-start gap-2">
-											<svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="none"
-												stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-													d="M5 13l4 4L19 7"></path>
-											</svg>
-											<span>Strategic guidance for exit planning</span>
-										</li>
-										<li class="flex items-start gap-2">
-											<svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="none"
-												stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-													d="M5 13l4 4L19 7"></path>
-											</svg>
-											<span>Proven track record with startups & investors</span>
-										</li>
-									</ul>
-								</div>
+							<div class="text-xs text-base-content/60 text-center mt-4">
+								No commitment required • Usually books out 2-3 weeks
 							</div>
 						</div>
 					</div>
 				</div>
-			</section>
-			<dialog id="cta" class="modal">
-				<div class="modal-box">
-					<h3 class="text-lg font-bold">Hello!</h3>
-					<p class="py-4">Press ESC key or click the button below to close</p>
-					<div class="modal-action">
-						<form method="dialog">
-							<button class="btn">Close</button>
-						</form>
+
+				<div class="mt-8">
+					<div class="alert alert-info max-w-md mx-auto bg-primary/10 text-primary border-primary/30">
+						<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+							<path fill-rule="evenodd"
+								d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+								clip-rule="evenodd"></path>
+						</svg>
+						<span class="text-sm">⏰ Limited spots available this month</span>
 					</div>
 				</div>
-			</dialog>
-		</main>
+			</div>
+		</div>
 
-		<footer class="footer footer-center p-4 bg-base-300 text-base-content">
-			<nav>
-				<p class="font-semibold">&copy; 2024 The Cap Table Guy. All rights reserved.</p>
-				<ul class="flex gap-4 mt-2 justify-center">
-					<li><a class="link link-hover" href="/blog">Blog</a></li>
-					<li><a class="link link-hover" href="/contact">Contact</a></li>
-					<li><a class="link link-hover" href="/about">About</a></li>
-				</ul>
-			</nav>
+		<!-- Footer -->
+		<footer class="footer footer-center bg-base-200 text-base-content p-10">
+			<div>
+				<div class="avatar placeholder mb-4">
+					<div class="bg-primary text-primary-content w-16 rounded-full">
+						<span class="text-2xl font-bold">B</span>
+					</div>
+				</div>
+				<p class="font-bold text-lg text-base-content">Bob Richardson</p>
+				<p class="text-base-content/70">Cap Table Expert • Helping startups since 2008</p>
+			</div>
+			<div>
+				<div class="grid grid-flow-col gap-4">
+					<a href="/about" class="link link-hover text-base-content/70 hover:text-primary">About</a>
+					<a href="/contact" class="link link-hover text-base-content/70 hover:text-primary">Contact</a>
+					<a href="/blog" class="link link-hover text-base-content/70 hover:text-primary">Blog</a>
+				</div>
+			</div>
+			<div>
+				<p class="text-base-content/60">© 2025 Bob Richardson Consulting. All rights reserved.</p>
+			</div>
 		</footer>
 	</body>
 
