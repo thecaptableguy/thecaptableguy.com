@@ -17,10 +17,21 @@
 			<div class="navbar-start">
 				<div class="flex items-center gap-3">
 					<div class="avatar">
-						<div class="w-10 rounded bg-primary text-primary-content">
-							<div class="flex items-center justify-center h-full">
-								<span class="text-sm font-semibold">BR</span>
-							</div>
+						<div class="w-10 rounded bg-primary text-primary-content flex items-center justify-center">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg" class="text-primary-content">
+								<!-- Cap table/equity chart icon -->
+								<path d="M3 3V21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round" />
+								<!-- Data bars representing equity distribution -->
+								<path d="M7 16L7 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+								<path d="M11 16L11 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+								<path d="M15 16L15 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+								<path d="M19 16L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+								<!-- Equity pie chart segment -->
+								<circle cx="7" cy="7" r="2" fill="currentColor" opacity="0.3" />
+								<path d="M7 5 L9 7 L7 9 Z" fill="currentColor" opacity="0.6" />
+							</svg>
 						</div>
 					</div>
 					<div>
@@ -37,7 +48,7 @@
 				</ul>
 			</div>
 			<div class="navbar-end">
-				<a href="#booking" class="btn btn-primary btn-sm">Book Consultation</a>
+				<a href="#booking" class="btn btn-outline btn-accent btn-sm font-bold">Free Consultation</a>
 			</div>
 		</div>
 
@@ -53,14 +64,13 @@
 						<div class="bg-base-200 border-b border-base-300 px-4 py-2 flex items-center justify-between">
 							<div class="flex items-center gap-2">
 								<div class="flex gap-1">
-									<div class="w-3 h-3 rounded-full bg-primary"></div>
-									<div class="w-3 h-3 rounded-full bg-secondary"></div>
-									<div class="w-3 h-3 rounded-full bg-base-300"></div>
+									<div class="w-3 h-3 rounded-full bg-red-500"></div>
+									<div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+									<div class="w-3 h-3 rounded-full bg-green-500"></div>
 								</div>
 								<span class="text-sm font-medium text-base-content ml-2">Microsoft Excel -
 									CapTable.xlsx</span>
 							</div>
-							<div class="text-xs text-base-content/50">●</div>
 						</div>
 
 						<!-- Excel Menu Bar -->
@@ -71,20 +81,6 @@
 								<span>Insert</span>
 								<span>Data</span>
 								<span>Formulas</span>
-							</div>
-						</div>
-
-						<!-- Excel Toolbar -->
-						<div class="bg-base-200 border-b border-base-200 px-4 py-2">
-							<div class="flex items-center gap-4 text-xs text-base-content/60">
-								<div class="flex gap-1">
-									<div class="w-6 h-6 bg-base-300 rounded border"></div>
-									<div class="w-6 h-6 bg-base-300 rounded border"></div>
-									<div class="w-6 h-6 bg-base-300 rounded border"></div>
-								</div>
-								<span class="text-base-content/40">|</span>
-								<div class="bg-base-100 border border-base-300 px-2 py-1 rounded text-xs">Arial</div>
-								<div class="bg-base-100 border border-base-300 px-2 py-1 rounded text-xs">11</div>
 							</div>
 						</div>
 
@@ -226,9 +222,12 @@
 				<div class="flex-1 text-center lg:text-left">
 					<!-- Minimal Trust Indicators -->
 					<div class="flex flex-wrap justify-center lg:justify-start gap-3 mb-8">
-						<div class="text-xs text-base-content/70 bg-base-200 px-3 py-1 rounded-full">CPA Certified</div>
-						<div class="text-xs text-base-content/70 bg-base-200 px-3 py-1 rounded-full">Stanford MBA</div>
-						<div class="text-xs text-base-content/70 bg-base-200 px-3 py-1 rounded-full">15+ Years
+						<div class="text-xs font-bold text-secondary border border-secondary px-3 py-1 rounded-full">CPA
+							Certified</div>
+						<div class="text-xs font-bold text-secondary border border-secondary px-3 py-1 rounded-full">
+							Stanford MBA</div>
+						<div class="text-xs font-bold text-secondary border border-secondary px-3 py-1 rounded-full">15+
+							Years
 							Experience</div>
 					</div>
 
@@ -251,10 +250,10 @@
 
 					<!-- Main CTA -->
 					<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
-						<a href="#booking" class="btn btn-primary btn-lg">
-							Schedule Free Consultation
+						<a href="#booking" class="btn btn-accent btn-lg">
+							Request Free Consultation
 						</a>
-						<a href="#learn-more" class="btn btn-outline btn-primary btn-lg">
+						<a href="#learn-more" class="btn btn-outline btn-secondary btn-lg">
 							View Case Studies
 						</a>
 					</div>
