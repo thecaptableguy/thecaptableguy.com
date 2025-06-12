@@ -12,7 +12,7 @@
     /* Professional off-white with subtle slate tint */
     --color-base-200: oklch(0.96 0.005 240);
     /* Light slate background */
-    --color-base-300: oklch(0.90 0.010 240);
+    --color-base-300: oklch(0.80 0.010 240);
     /* Professional border color */
     --color-base-content: oklch(0.22 0.020 240);
     /* Professional dark slate text */
