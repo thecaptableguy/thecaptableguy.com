@@ -1,50 +1,175 @@
 <?php
-// Set a default success/error message variable
+session_start();
+
+// Configuration constants
+define('BOB_EMAIL', 'bob@captableexpert.com');
+define('MAX_MESSAGE_LENGTH', 2000);
+define('RATE_LIMIT_MINUTES', 1);
+define('MAX_SUBMISSIONS_PER_PERIOD', 3);
+
+// Initialize variables
 $message = '';
-$message_type = ''; // 'success' or 'error'
+$message_type = '';
+$errors = [];
+$form_data = [
+    'email' => '',
+    'message' => '',
+    'honeypot' => ''
+];
 
-// Check if the form has been submitted
-if (isset($_POST['submit'])) {
-    // Sanitize and collect form data
-    $name = htmlspecialchars(strip_tags(trim($_POST['name'])));
-    $email = htmlspecialchars(strip_tags(trim($_POST['email'])));
-    $subject = htmlspecialchars(strip_tags(trim($_POST['subject'])));
-    $message_content = htmlspecialchars(strip_tags(trim($_POST['message'])));
+// Generate CSRF token if not exists
+if (!isset($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
 
-    // Validate input
-    if (empty($name) || empty($email) || empty($subject) || empty($message_content)) {
-        $message = 'Please fill in all fields.';
-        $message_type = 'error';
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $message = 'Invalid email format. Please enter a valid email address.';
-        $message_type = 'error';
-    } else {
-        // --- Email sending logic ---
-        // Replace 'your_email@example.com' with the email address where you want to receive messages
-        $to = 'bob@thecaptableguy.com';
-        $email_subject = "Contact Form: $subject";
-        $email_body = "You have received a new message from your website contact form.\n\n" .
-                      "Here are the details:\n\n" .
-                      "Name: $name\n" .
-                      "Email: $email\n" .
-                      "Subject: $subject\n" .
-                      "Message:\n$message_content";
+// Rate limiting function
+function checkRateLimit() {
+    $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+    $current_time = time();
+    
+    if (!isset($_SESSION['submissions'])) {
+        $_SESSION['submissions'] = [];
+    }
+    
+    // Clean old submissions
+    $_SESSION['submissions'] = array_filter($_SESSION['submissions'], function($timestamp) use ($current_time) {
+        return ($current_time - $timestamp) < (RATE_LIMIT_MINUTES * 60);
+    });
+    
+    return count($_SESSION['submissions']) < MAX_SUBMISSIONS_PER_PERIOD;
+}
 
-        // Set email headers to ensure proper formatting and reply-to functionality
-        $headers = "From: $name <$email>\r\n";
-        $headers .= "Reply-To: $email\r\n";
-        $headers .= "Content-type: text/plain; charset=UTF-8\r\n";
+// Log function (basic file logging)
+function logMessage($message, $level = 'INFO') {
+    $timestamp = date('Y-m-d H:i:s');
+    $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+    $log_entry = "[$timestamp] [$level] [IP: $ip] $message" . PHP_EOL;
+    error_log($log_entry, 3, __DIR__ . '/contact_form.log');
+}
 
-        // Attempt to send the email
-        if (mail($to, $email_subject, $email_body, $headers)) {
-            $message = 'Thank you! Your message has been sent successfully.';
-            $message_type = 'success';
-            // Optionally, clear the form fields after successful submission
-            $_POST = array(); // Clear all POST data
-        } else {
-            $message = 'Oops! Something went wrong and we could not send your message. Please try again later.';
-            $message_type = 'error';
+// Sanitize and validate input
+function sanitizeInput($input, $max_length = null) {
+    $sanitized = htmlspecialchars(strip_tags(trim($input)), ENT_QUOTES, 'UTF-8');
+    if ($max_length && strlen($sanitized) > $max_length) {
+        return substr($sanitized, 0, $max_length);
+    }
+    return $sanitized;
+}
+
+function validateEmail($email) {
+    // Enhanced email validation
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        return false;
+    }
+    
+    // Check for suspicious patterns (basic header injection prevention)
+    $suspicious_patterns = ['/\r/', '/\n/', '/\%0A/', '/\%0D/', '/Content-Type:/i', '/bcc:/i', '/cc:/i'];
+    foreach ($suspicious_patterns as $pattern) {
+        if (preg_match($pattern, $email)) {
+            return false;
         }
+    }
+    
+    return true;
+}
+
+// Process form submission
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
+    // CSRF protection
+    if (!isset($_POST['csrf_token']) || !hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
+        $errors[] = 'Security token mismatch. Please try again.';
+        logMessage('CSRF token mismatch attempt', 'WARNING');
+    }
+    
+    // Rate limiting check
+    if (!checkRateLimit()) {
+        $errors[] = 'Too many submissions. Please wait before trying again.';
+        logMessage('Rate limit exceeded', 'WARNING');
+    }
+    
+    // Honeypot check (bot detection)
+    if (!empty($_POST['name'])) {
+        $errors[] = 'Spam detected.';
+        logMessage('Honeypot triggered - possible bot submission', 'WARNING');
+    }
+    
+    if (empty($errors)) {
+        // Sanitize form data
+        $form_data['email'] = sanitizeInput($_POST['email'] ?? '');
+        $form_data['message'] = sanitizeInput($_POST['message'] ?? '', MAX_MESSAGE_LENGTH);
+        
+        // Validation
+        if (empty($form_data['email'])) {
+            $errors[] = 'Email is required.';
+        } elseif (!validateEmail($form_data['email'])) {
+            $errors[] = 'Please enter a valid email address.';
+        }
+        
+        if (empty($form_data['message'])) {
+            $errors[] = 'Message is required.';
+        } elseif (strlen($form_data['message']) < MIN_MESSAGE_LENGTH) {
+            $errors[] = 'Message must be at least ' . MIN_MESSAGE_LENGTH . ' characters long.';
+        }
+        
+        // If no validation errors, send email
+        if (empty($errors)) {
+            try {
+                // Prepare safe email headers
+                $to = RECIPIENT_EMAIL;
+                $email_subject = 'Contact Form Message';
+                
+                $email_body = "You have received a new message from your website contact form.\n\n" .
+                             "Details:\n" .
+                             "Email: " . $form_data['email'] . "\n" .
+                             "IP Address: " . ($_SERVER['REMOTE_ADDR'] ?? 'unknown') . "\n" .
+                             "User Agent: " . ($_SERVER['HTTP_USER_AGENT'] ?? 'unknown') . "\n" .
+                             "Timestamp: " . date('Y-m-d H:i:s') . "\n\n" .
+                             "Message:\n" . $form_data['message'];
+                
+                // Safe headers (prevent header injection)
+                $headers = [];
+                $headers[] = 'From: Contact Form <noreply@' . ($_SERVER['HTTP_HOST'] ?? 'localhost') . '>';
+                $headers[] = 'Reply-To: ' . $form_data['email'];
+                $headers[] = 'Content-Type: text/plain; charset=UTF-8';
+                $headers[] = 'X-Mailer: PHP/' . phpversion();
+                
+                $headers_string = implode("\r\n", $headers);
+                
+                if (mail($to, $email_subject, $email_body, $headers_string)) {
+                    $message = 'Thank you! Your message has been sent successfully.';
+                    $message_type = 'success';
+                    
+                    // Log successful submission
+                    logMessage("Successful form submission from {$form_data['email']}");
+                    
+                    // Add to rate limiting
+                    $_SESSION['submissions'][] = time();
+                    
+                    // Clear form data on success
+                    $form_data = [
+                        'email' => '',
+                        'message' => '',
+                        'honeypot' => ''
+                    ];
+                    
+                    // Regenerate CSRF token
+                    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+                    
+                } else {
+                    $errors[] = 'Unable to send message. Please try again later.';
+                    logMessage("Failed to send email for {$form_data['email']}", 'ERROR');
+                }
+                
+            } catch (Exception $e) {
+                $errors[] = 'An unexpected error occurred. Please try again later.';
+                logMessage("Exception in email sending: " . $e->getMessage(), 'ERROR');
+            }
+        }
+    }
+    
+    if (!empty($errors)) {
+        $message = implode(' ', $errors);
+        $message_type = 'error';
     }
 }
 ?>
@@ -88,32 +213,34 @@ if (isset($_POST['submit'])) {
         <?php endif; ?>
 
         <form action="" method="POST" class="space-y-4">
-            <div>
-                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
-                <input type="text" id="name" name="name"
-                       class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                       placeholder="John Doe" value="<?php echo isset($_POST['name']) ? htmlspecialchars($_POST['name']) : ''; ?>" required>
+            <!-- CSRF Protection -->
+            <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
+            
+            <!-- Honeypot field (hidden from users, bots might fill it) -->
+            <div style="position: absolute; left: -9999px;">
+                <label for="name">Name (leave blank):</label>
+                <input type="text" id="name" name="name" tabindex="-1" autocomplete="off">
             </div>
 
             <div>
                 <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Your Email</label>
                 <input type="email" id="email" name="email"
                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                       placeholder="john.doe@example.com" value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>" required>
-            </div>
-
-            <div>
-                <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-                <input type="text" id="subject" name="subject"
-                       class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                       placeholder="Regarding your service..." value="<?php echo isset($_POST['subject']) ? htmlspecialchars($_POST['subject']) : ''; ?>" required>
+                       placeholder="john.doe@example.com" 
+                       value="<?php echo htmlspecialchars($form_data['email']); ?>" 
+                       required>
             </div>
 
             <div>
                 <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
                 <textarea id="message" name="message" rows="5"
                           class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                          placeholder="Your message here..." required><?php echo isset($_POST['message']) ? htmlspecialchars($_POST['message']) : ''; ?></textarea>
+                          placeholder="Your message here..." 
+                          maxlength="<?php echo MAX_MESSAGE_LENGTH; ?>" 
+                          required><?php echo htmlspecialchars($form_data['message']); ?></textarea>
+                <div class="text-xs text-gray-500 mt-1">
+                    Minimum <?php echo MIN_MESSAGE_LENGTH; ?> characters, maximum <?php echo MAX_MESSAGE_LENGTH; ?> characters
+                </div>
             </div>
 
             <div>
