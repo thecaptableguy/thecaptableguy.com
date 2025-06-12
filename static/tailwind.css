@@ -1,51 +1,50 @@
 @import "tailwindcss";
-@plugin "../.dev/daisyui.js"{
+@plugin "../.dev/daisyui.js";
+
+@plugin "../.dev/daisyui-theme.js" {
     name: "bobthere";
     default: true;
-    /* set as default */
     prefersdark: false;
-    /* set as default dark mode (prefers-color-scheme:dark) */
     color-scheme: light;
-    /* color of browser-provided UI */
 
-    /* Base Colors - Refined, subtle foundation */
-    --color-base-100: oklch(0.98 0.002 220);
-    /* Very subtle off-white */
-    --color-base-200: oklch(0.95 0.004 220);
-    /* Light gray background */
-    --color-base-300: oklch(0.88 0.008 220);
-    /* Soft border color */
-    --color-base-content: oklch(0.25 0.015 220);
-    /* Rich, readable dark gray */
+    /* Base Colors - Professional slate foundation */
+    --color-base-100: oklch(0.98 0.003 240);
+    /* Professional off-white with subtle slate tint */
+    --color-base-200: oklch(0.96 0.005 240);
+    /* Light slate background */
+    --color-base-300: oklch(0.90 0.010 240);
+    /* Professional border color */
+    --color-base-content: oklch(0.22 0.020 240);
+    /* Professional dark slate text */
 
-    /* Primary Colors - Muted plum/aubergine (sophisticated, premium) */
-    --color-primary: oklch(0.60 0.10 320);
-    /* Main muted plum */
-    --color-primary-content: oklch(0.98 0.005 320);
+    /* Primary Colors - Professional muted slate-blue (trustworthy, corporate) */
+    --color-primary: oklch(0.55 0.08 250);
+    /* Professional muted slate-blue */
+    --color-primary-content: oklch(0.98 0.005 250);
     /* Clean white text on primary */
 
-    /* Secondary Colors - Muted terracotta/clay (warm, earthy, sophisticated) */
-    --color-secondary: oklch(0.60 0.10 40);
-    /* Main muted terracotta */
-    --color-secondary-content: oklch(0.98 0.005 40);
+    /* Secondary Colors - Vibrant warm orange-red (energetic, warm, attention-grabbing) */
+    --color-secondary: oklch(0.70 0.25 35);
+    /* Bright vibrant orange-red */
+    --color-secondary-content: oklch(0.98 0.005 35);
     /* Clean white text on secondary */
 
-    /* Accent Colors - Use secondary for accent */
-    --color-accent: oklch(0.60 0.10 40);
-    /* Same as secondary */
-    --color-accent-content: oklch(0.98 0.005 40);
+    /* Accent Colors - Vibrant teal (contrasting, modern, distinctive) */
+    --color-accent: oklch(0.68 0.22 185);
+    /* Bright vibrant teal */
+    --color-accent-content: oklch(0.98 0.005 185);
     /* Clean white text on accent */
 
-    /* Neutral Colors - Sophisticated gray */
-    --color-neutral: oklch(0.40 0.02 220);
-    /* Deep neutral gray */
-    --color-neutral-content: oklch(0.98 0.005 220);
+    /* Neutral Colors - Professional slate */
+    --color-neutral: oklch(0.38 0.025 240);
+    /* Professional deep slate */
+    --color-neutral-content: oklch(0.98 0.005 240);
     /* Clean white text on neutral */
 
     /* Semantic Colors */
-    --color-info: oklch(0.70 0.15 220);
-    /* Info blue */
-    --color-info-content: oklch(0.98 0.01 220);
+    --color-info: oklch(0.70 0.15 240);
+    /* Professional info blue-slate */
+    --color-info-content: oklch(0.98 0.01 240);
     /* White text on info */
     --color-success: oklch(0.65 0.15 140);
     /* Success green */
