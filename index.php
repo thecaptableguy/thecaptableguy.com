@@ -13,7 +13,7 @@ if (!isset($_SESSION['csrf_token'])) {
 		<title>Bob Gillespie - Cap Table Specialist - Free 1-Hour Consultation</title>
 		<meta name="description"
 			content="Get expert cap table advice from Bob. Book your free one-hour consultation and avoid costly equity mistakes.">
-
+		<link rel="icon" type="image/png" href="/static/favicon.png" />
 		<link href="/static/styles.css" rel="stylesheet" type="text/css" />
 	</head>
 
@@ -23,21 +23,8 @@ if (!isset($_SESSION['csrf_token'])) {
 			<nav class="navbar-start">
 				<div class="flex items-center gap-3">
 					<div class="avatar">
-						<div class="w-10 rounded bg-primary text-primary-content flex items-center justify-center">
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-								xmlns="http://www.w3.org/2000/svg" class="text-primary-content">
-								<!-- Cap table/equity chart icon -->
-								<path d="M3 3V21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-									stroke-linejoin="round" />
-								<!-- Data bars representing equity distribution -->
-								<path d="M7 16L7 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-								<path d="M11 16L11 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-								<path d="M15 16L15 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-								<path d="M19 16L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-								<!-- Equity pie chart segment -->
-								<circle cx="7" cy="7" r="2" fill="currentColor" opacity="0.3" />
-								<path d="M7 5 L9 7 L7 9 Z" fill="currentColor" opacity="0.6" />
-							</svg>
+						<div class="size-16 rounded">
+							<img src="/static/logo.webp" alt="Cap Table Expert Logo" class="w-full h-full object-contain">
 						</div>
 					</div>
 					<div>
@@ -500,24 +487,11 @@ if (!isset($_SESSION['csrf_token'])) {
 		<!-- Footer -->
 		<footer class="footer footer-center bg-base-200 text-base-content p-10">
 			<div>
-				<div class="avatar">
-					<div class="w-16 rounded bg-primary text-primary-content flex items-center justify-center">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-							class="text-primary-content">
-							<!-- Cap table/equity chart icon -->
-							<path d="M3 3V21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-								stroke-linejoin="round" />
-							<!-- Data bars representing equity distribution -->
-							<path d="M7 16L7 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-							<path d="M11 16L11 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-							<path d="M15 16L15 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-							<path d="M19 16L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-							<!-- Equity pie chart segment -->
-							<circle cx="7" cy="7" r="2" fill="currentColor" opacity="0.3" />
-							<path d="M7 5 L9 7 L7 9 Z" fill="currentColor" opacity="0.6" />
-						</svg>
+									<div class="avatar">
+						<div class="size-28 rounded">
+							<img src="/static/logo.webp" alt="Cap Table Expert Logo" class="w-full h-full object-contain">
+						</div>
 					</div>
-				</div>
 				<p class="font-bold text-lg text-base-content">Bob Gillespie</p>
 				<p class="text-base-content/70">Cap Table Expert • Helping startups since 2008</p>
 			</div>
