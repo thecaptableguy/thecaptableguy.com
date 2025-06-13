@@ -30,8 +30,8 @@
             </nav>
             <nav class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1 text-sm">
-                    <li><a href="/about" class="text-base-content/70 hover:text-primary">About</a></li>
-                    <li><a href="/blog" class="text-base-content/70 hover:text-primary">Blog</a></li>
+                    <li><a href="/about/" class="text-base-content/70 hover:text-primary">About</a></li>
+                    <li><a href="/blog/" class="text-base-content/70 hover:text-primary">Blog</a></li>
                 </ul>
             </nav>
             <nav class="navbar-end">
@@ -82,16 +82,12 @@
                         <p class="text-lg text-base-content/80 leading-relaxed mb-6">
                             A cap table is a record of a company's equity ownership. It typically includes:
                         </p>
-                        <div class="card bg-base-100 shadow-sm border border-base-300 mb-8">
-                            <div class="card-body p-8">
-                                <ul class="list-disc list-inside space-y-3 text-lg text-base-content/80">
-                                    <li>Founders' shares</li>
-                                    <li>Investor ownership from equity rounds or convertibles</li>
-                                    <li>Employee stock option pool (ESOP)</li>
-                                    <li>Outstanding SAFEs, notes, warrants, or other convertible securities</li>
-                                </ul>
-                            </div>
-                        </div>
+                        <ul class="list-disc list-inside space-y-3 text-lg text-base-content/80 mb-8">
+                            <li>Founders' shares</li>
+                            <li>Investor ownership from equity rounds or convertibles</li>
+                            <li>Employee stock option pool (ESOP)</li>
+                            <li>Outstanding SAFEs, notes, warrants, or other convertible securities</li>
+                        </ul>
                         <p class="text-lg text-base-content/80 leading-relaxed">
                             It shows who owns what — in both number of shares and percent of the company — and how that
                             ownership will change after financing, hiring, or exits.
@@ -108,8 +104,8 @@
                             They affect:
                         </p>
                         <div class="grid md:grid-cols-2 gap-6 mb-8">
-                            <div class="card bg-base-100 shadow-sm border border-base-300">
-                                <div class="card-body p-6">
+                            <div class="alert">
+                                <div>
                                     <div class="flex items-center gap-3 mb-3">
                                         <span class="text-2xl">🧠</span>
                                         <h4 class="font-bold text-lg">Decision-making</h4>
@@ -117,8 +113,8 @@
                                     <p class="text-base-content/80">Voting rights and board control</p>
                                 </div>
                             </div>
-                            <div class="card bg-base-100 shadow-sm border border-base-300">
-                                <div class="card-body p-6">
+                            <div class="alert">
+                                <div>
                                     <div class="flex items-center gap-3 mb-3">
                                         <span class="text-2xl">💰</span>
                                         <h4 class="font-bold text-lg">Fundraising</h4>
@@ -126,8 +122,8 @@
                                     <p class="text-base-content/80">How much you give up in each round</p>
                                 </div>
                             </div>
-                            <div class="card bg-base-100 shadow-sm border border-base-300">
-                                <div class="card-body p-6">
+                            <div class="alert">
+                                <div>
                                     <div class="flex items-center gap-3 mb-3">
                                         <span class="text-2xl">🧲</span>
                                         <h4 class="font-bold text-lg">Recruiting</h4>
@@ -135,8 +131,8 @@
                                     <p class="text-base-content/80">What you can offer to future employees</p>
                                 </div>
                             </div>
-                            <div class="card bg-base-100 shadow-sm border border-base-300">
-                                <div class="card-body p-6">
+                            <div class="alert">
+                                <div>
                                     <div class="flex items-center gap-3 mb-3">
                                         <span class="text-2xl">🏁</span>
                                         <h4 class="font-bold text-lg">Exits</h4>
@@ -154,50 +150,54 @@
                     <section class="mb-12">
                         <h2 class="text-3xl font-bold text-primary mb-8">Key Concepts to Know</h2>
 
-                        <!-- Concept 1 -->
-                        <div class="card bg-base-100 shadow-sm border border-base-300 mb-8">
-                            <div class="card-body p-8">
-                                <h3 class="text-2xl font-bold text-accent mb-4">1. Fully Diluted Shares</h3>
-                                <p class="text-base-content/80 leading-relaxed">
-                                    This is the total number of shares outstanding if all options, SAFEs, notes, and
-                                    warrants convert. This is the denominator investors care about.
-                                </p>
+                        <div class="grid md:grid-cols-2 gap-6 mb-8">
+                            <!-- Concept 1 -->
+                            <div class="alert">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-accent mb-4">Fully Diluted Shares</h3>
+                                    <p class="text-base-content/80 leading-relaxed">
+                                        This is the total number of shares outstanding if all options, SAFEs, notes, and
+                                        warrants convert. This is the denominator investors care about.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- Concept 2 -->
-                        <div class="card bg-base-100 shadow-sm border border-base-300 mb-8">
-                            <div class="card-body p-8">
-                                <h3 class="text-2xl font-bold text-accent mb-4">2. Ownership vs. Value</h3>
-                                <p class="text-base-content/80 leading-relaxed">
-                                    Owning 10% of a startup worth $5M isn't the same as owning 10% of one worth $50M.
-                                    The cap table tracks percentages, but value is always changing.
-                                </p>
+                            <!-- Concept 2 -->
+                            <div class="alert">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-accent mb-4">Ownership vs. Value</h3>
+                                    <p class="text-base-content/80 leading-relaxed">
+                                        Owning 10% of a startup worth $5M isn't the same as owning 10% of one worth
+                                        $50M.
+                                        The cap table tracks percentages, but value is always changing.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- Concept 3 -->
-                        <div class="card bg-base-100 shadow-sm border border-base-300 mb-8">
-                            <div class="card-body p-8">
-                                <h3 class="text-2xl font-bold text-accent mb-4">3. Pre-Money vs. Post-Money</h3>
-                                <ul class="list-disc list-inside space-y-2 text-base-content/80 leading-relaxed mb-4">
-                                    <li>Pre-money valuation is the company's value before new investment.</li>
-                                    <li>Post-money = pre-money + new investment.</li>
-                                </ul>
-                                <p class="text-base-content/80 leading-relaxed">
-                                    Important when modeling dilution and pricing new rounds.
-                                </p>
+                            <!-- Concept 3 -->
+                            <div class="alert">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-accent mb-4">Pre-Money vs. Post-Money</h3>
+                                    <ul
+                                        class="list-disc list-inside space-y-2 text-base-content/80 leading-relaxed mb-4">
+                                        <li>Pre-money valuation is the company's value before new investment.</li>
+                                        <li>Post-money = pre-money + new investment.</li>
+                                    </ul>
+                                    <p class="text-base-content/80 leading-relaxed">
+                                        Important when modeling dilution and pricing new rounds.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- Concept 4 -->
-                        <div class="card bg-base-100 shadow-sm border border-base-300 mb-8">
-                            <div class="card-body p-8">
-                                <h3 class="text-2xl font-bold text-accent mb-4">4. Option Pool</h3>
-                                <p class="text-base-content/80 leading-relaxed">
-                                    Shares reserved for employees and advisors. Usually 10–20%, often added before a
-                                    funding round — which dilutes founders more than investors.
-                                </p>
+                            <!-- Concept 4 -->
+                            <div class="alert">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-accent mb-4">Option Pool</h3>
+                                    <p class="text-base-content/80 leading-relaxed">
+                                        Shares reserved for employees and advisors. Usually 10–20%, often added before a
+                                        funding round — which dilutes founders more than investors.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -205,74 +205,76 @@
                     <section class="mb-12">
                         <h2 class="text-3xl font-bold text-primary mb-8">Cap Table Stages: How It Evolves</h2>
 
-                        <!-- Stage 1 -->
-                        <div class="card bg-base-100 shadow-sm border border-base-300 mb-8">
-                            <div class="card-body p-8">
-                                <div class="flex items-center gap-3 mb-4">
-                                    <span class="badge badge-success badge-lg">🟢</span>
-                                    <h3 class="text-2xl font-bold text-accent">Early Stage (Friends & Founders)</h3>
+                        <div class="grid md:grid-cols-2 gap-6 mb-8">
+                            <!-- Stage 1 -->
+                            <div class="alert">
+                                <div>
+                                    <div class="flex items-center gap-3 mb-4">
+                                        <span class="">🟢</span>
+                                        <h3 class="text-2xl font-bold text-accent">Early Stage (Friends & Founders)</h3>
+                                    </div>
+                                    <ul class="list-disc list-inside space-y-2 text-base-content/80 leading-relaxed">
+                                        <li>Founders split shares — ideally with vesting</li>
+                                        <li>Option pool is created</li>
+                                        <li>Maybe a few friends/family or angel SAFEs</li>
+                                    </ul>
                                 </div>
-                                <ul class="list-disc list-inside space-y-2 text-base-content/80 leading-relaxed">
-                                    <li>Founders split shares — ideally with vesting</li>
-                                    <li>Option pool is created</li>
-                                    <li>Maybe a few friends/family or angel SAFEs</li>
-                                </ul>
                             </div>
-                        </div>
 
-                        <!-- Stage 2 -->
-                        <div class="card bg-base-100 shadow-sm border border-base-300 mb-8">
-                            <div class="card-body p-8">
-                                <div class="flex items-center gap-3 mb-4">
-                                    <span class="badge badge-info badge-lg">🔵</span>
-                                    <h3 class="text-2xl font-bold text-accent">Seed Round</h3>
+                            <!-- Stage 2 -->
+                            <div class="alert">
+                                <div>
+                                    <div class="flex items-center gap-3 mb-4">
+                                        <span class="">🔵</span>
+                                        <h3 class="text-2xl font-bold text-accent">Seed Round</h3>
+                                    </div>
+                                    <ul class="list-disc list-inside space-y-2 text-base-content/80 leading-relaxed">
+                                        <li>SAFEs/convertible notes start converting</li>
+                                        <li>Institutional investors come in</li>
+                                        <li>Option pool top-up often required</li>
+                                        <li>Cap table starts getting complex</li>
+                                    </ul>
                                 </div>
-                                <ul class="list-disc list-inside space-y-2 text-base-content/80 leading-relaxed">
-                                    <li>SAFEs/convertible notes start converting</li>
-                                    <li>Institutional investors come in</li>
-                                    <li>Option pool top-up often required</li>
-                                    <li>Cap table starts getting complex</li>
-                                </ul>
                             </div>
-                        </div>
 
-                        <!-- Stage 3 -->
-                        <div class="card bg-base-100 shadow-sm border border-base-300 mb-8">
-                            <div class="card-body p-8">
-                                <div class="flex items-center gap-3 mb-4">
-                                    <span class="badge badge-secondary badge-lg">🟣</span>
-                                    <h3 class="text-2xl font-bold text-accent">Series A+</h3>
+                            <!-- Stage 3 -->
+                            <div class="alert">
+                                <div>
+                                    <div class="flex items-center gap-3 mb-4">
+                                        <span class="">🟣</span>
+                                        <h3 class="text-2xl font-bold text-accent">Series A+</h3>
+                                    </div>
+                                    <ul class="list-disc list-inside space-y-2 text-base-content/80 leading-relaxed">
+                                        <li>Priced rounds with negotiated ownership</li>
+                                        <li>Multiple share classes (common vs. preferred)</li>
+                                        <li>Protective provisions, board seats, liquidation preferences</li>
+                                        <li>Dilution begins to snowball</li>
+                                    </ul>
                                 </div>
-                                <ul class="list-disc list-inside space-y-2 text-base-content/80 leading-relaxed">
-                                    <li>Priced rounds with negotiated ownership</li>
-                                    <li>Multiple share classes (common vs. preferred)</li>
-                                    <li>Protective provisions, board seats, liquidation preferences</li>
-                                    <li>Dilution begins to snowball</li>
-                                </ul>
                             </div>
-                        </div>
 
-                        <!-- Stage 4 -->
-                        <div class="card bg-base-100 shadow-sm border border-base-300 mb-8">
-                            <div class="card-body p-8">
-                                <div class="flex items-center gap-3 mb-4">
-                                    <span class="badge badge-warning badge-lg">🟠</span>
-                                    <h3 class="text-2xl font-bold text-accent">Later Stages</h3>
+                            <!-- Stage 4 -->
+                            <div class="alert">
+                                <div>
+                                    <div class="flex items-center gap-3 mb-4">
+                                        <span class="">🟠</span>
+                                        <h3 class="text-2xl font-bold text-accent">Later Stages</h3>
+                                    </div>
+                                    <ul class="list-disc list-inside space-y-2 text-base-content/80 leading-relaxed">
+                                        <li>Multiple rounds, employee turnover, option refreshes</li>
+                                        <li>Secondary sales and liquidity events</li>
+                                        <li>Exit planning, waterfalls, and tax considerations</li>
+                                    </ul>
                                 </div>
-                                <ul class="list-disc list-inside space-y-2 text-base-content/80 leading-relaxed">
-                                    <li>Multiple rounds, employee turnover, option refreshes</li>
-                                    <li>Secondary sales and liquidity events</li>
-                                    <li>Exit planning, waterfalls, and tax considerations</li>
-                                </ul>
                             </div>
                         </div>
                     </section>
 
                     <section class="mb-12">
                         <h2 class="text-3xl font-bold text-primary mb-6">Common Mistakes</h2>
-                        <div class="alert alert-error mb-6">
+                        <div class="alert alert-error alert-outline mb-6">
                             <div>
-                                <ul class="list-none space-y-2 text-lg">
+                                <ul class="list-none space-y-2 text-lg text-primary">
                                     <li>❌ No founder vesting</li>
                                     <li>❌ Giving away too much equity early</li>
                                     <li>❌ Not modeling dilution before raising</li>
@@ -288,8 +290,9 @@
                     </section>
 
                     <section class="mb-12">
-                        <h2 class="text-3xl font-bold text-primary mb-6">Final Thoughts: Own Your Cap Table</h2>
+                        <h2 class="text-3xl font-bold text-primary mb-6">Final Thoughts</h2>
                         <p class="text-lg text-base-content/80 leading-relaxed mb-6">
+                            Own Your Cap Table.
                             Your cap table is your scoreboard, your roadmap, and your control panel. Whether you're a
                             first-time founder or a seasoned operator, understanding it is essential.
                         </p>
@@ -303,47 +306,51 @@
                         </p>
                         <p class="text-lg text-base-content/80 leading-relaxed">
                             If you'd like to discuss your cap table needs with Bob, connect with him here – because
-                            every point matters.
+                            <span class="text-xl font-bold text-secondary">every point matters.</span>
                         </p>
                     </section>
                 </div>
+            </div>
+        </main>
 
-                <!-- Contact Section -->
-                <div id="contact" class="bg-primary text-primary-content py-20 mt-16 rounded-2xl">
-                    <div class="px-4 text-center">
-                        <h2 class="text-4xl font-bold mb-6">
-                            Get Expert Cap Table Guidance
-                        </h2>
-                        <p class="text-xl mb-12 text-primary-content/90 max-w-3xl mx-auto">
-                            Send Bob a message. He will get back to you promptly
-                        </p>
+        <!-- Contact Section -->
+        <section id="contact" class="bg-primary text-primary-content py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold mb-6">
+                    Get Expert Cap Table Guidance
+                </h2>
+                <p class="text-xl mb-12 text-primary-content/90 max-w-3xl mx-auto">
+                    Send Bob a message. He will get back to you promptly
+                </p>
 
-                        <div class="max-w-lg mx-auto">
-                            <div class="card bg-base-100 text-base-content shadow-2xl">
-                                <div class="card-body">
-                                    <h3 class="card-title justify-center text-2xl mb-6 text-base-content">
-                                        Message Bob
-                                    </h3>
+                <div class="max-w-lg mx-auto">
+                    <div class="card bg-base-100 text-base-content shadow-2xl">
+                        <div class="card-body">
+                            <h3 class="card-title justify-center text-2xl mb-6 text-base-content">
+                                Message Bob
+                            </h3>
 
-                                    <form id="message" method="POST" action="" class="space-y-4">
-                                        <input type="email" name="email" placeholder="Your email address.."
-                                            class="input input-lg w-full placeholder:text-base-300" required />
+                            <form id="message" method="POST" action="/contact/opvmghihjeo.php" class="space-y-4">
+                                <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" />
 
-                                        <textarea name="message"
-                                            class="textarea textarea-lg w-full placeholder:text-base-300" rows="4"
-                                            placeholder="Tell us about your cap table needs..." required></textarea>
+                                <input type="text" name="name" placeholder="Your name..."
+                                    class="input input-lg w-full placeholder:text-base-300" />
 
-                                        <button type="submit" class="btn btn-outline btn-accent btn-lg btn-block">
-                                            Send Message
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
+                                <input type="email" name="email" placeholder="Your email address.."
+                                    class="input input-lg w-full placeholder:text-base-300" required />
+
+                                <textarea name="message" class="textarea textarea-lg w-full placeholder:text-base-300"
+                                    rows="4" placeholder="Tell us about your cap table needs..."></textarea>
+
+                                <button type="submit" class="btn btn-outline btn-accent btn-lg btn-block">
+                                    Send Message
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
+        </section>
 
         <!-- Footer -->
         <footer class="footer footer-center bg-base-200 text-base-content p-10">

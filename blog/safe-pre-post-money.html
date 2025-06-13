@@ -30,8 +30,8 @@
             </nav>
             <nav class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1 text-sm">
-                    <li><a href="/about" class="text-base-content/70 hover:text-primary">About</a></li>
-                    <li><a href="/blog" class="text-base-content/70 hover:text-primary">Blog</a></li>
+                    <li><a href="/about/" class="text-base-content/70 hover:text-primary">About</a></li>
+                    <li><a href="/blog/" class="text-base-content/70 hover:text-primary">Blog</a></li>
                 </ul>
             </nav>
             <nav class="navbar-end">
@@ -108,7 +108,7 @@
                                         priced round.</li>
                                 </ul>
                                 <div class="grid md:grid-cols-2 gap-4">
-                                    <div class="alert alert-success">
+                                    <div class="alert">
                                         <div>
                                             <h4 class="font-bold text-lg mb-2">Pros:</h4>
                                             <ul class="list-disc list-inside space-y-1">
@@ -117,7 +117,7 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="alert alert-warning">
+                                    <div class="alert">
                                         <div>
                                             <h4 class="font-bold text-lg mb-2">Cons:</h4>
                                             <ul class="list-disc list-inside space-y-1">
@@ -152,7 +152,7 @@
                                     <li>Dilution from SAFEs falls entirely on the founders and existing holders</li>
                                 </ul>
                                 <div class="grid md:grid-cols-2 gap-4">
-                                    <div class="alert alert-success">
+                                    <div class="alert">
                                         <div>
                                             <h4 class="font-bold text-lg mb-2">Pros:</h4>
                                             <ul class="list-disc list-inside space-y-1">
@@ -162,7 +162,7 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="alert alert-warning">
+                                    <div class="alert">
                                         <div>
                                             <h4 class="font-bold text-lg mb-2">Cons:</h4>
                                             <ul class="list-disc list-inside space-y-1">
@@ -249,47 +249,51 @@
                         </p>
                         <p class="text-lg text-base-content/80 leading-relaxed">
                             If you'd like to talk with Bob about cap tables, you can connect with him here – because
-                            every point matters.
+                            <span class="text-xl font-bold text-secondary">every point matters.</span>
                         </p>
                     </section>
                 </div>
+            </div>
+        </main>
 
-                <!-- Contact Section -->
-                <div id="contact" class="bg-primary text-primary-content py-20 mt-16 rounded-2xl">
-                    <div class="px-4 text-center">
-                        <h2 class="text-4xl font-bold mb-6">
-                            Get Expert Cap Table Guidance
-                        </h2>
-                        <p class="text-xl mb-12 text-primary-content/90 max-w-3xl mx-auto">
-                            Send Bob a message. He will get back to you promptly
-                        </p>
+        <!-- Contact Section -->
+        <section id="contact" class="bg-primary text-primary-content py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold mb-6">
+                    Get Expert Cap Table Guidance
+                </h2>
+                <p class="text-xl mb-12 text-primary-content/90 max-w-3xl mx-auto">
+                    Send Bob a message. He will get back to you promptly
+                </p>
 
-                        <div class="max-w-lg mx-auto">
-                            <div class="card bg-base-100 text-base-content shadow-2xl">
-                                <div class="card-body">
-                                    <h3 class="card-title justify-center text-2xl mb-6 text-base-content">
-                                        Message Bob
-                                    </h3>
+                <div class="max-w-lg mx-auto">
+                    <div class="card bg-base-100 text-base-content shadow-2xl">
+                        <div class="card-body">
+                            <h3 class="card-title justify-center text-2xl mb-6 text-base-content">
+                                Message Bob
+                            </h3>
 
-                                    <form id="message" method="POST" action="" class="space-y-4">
-                                        <input type="email" name="email" placeholder="Your email address.."
-                                            class="input input-lg w-full placeholder:text-base-300" required />
+                            <form id="message" method="POST" action="/contact/opvmghihjeo.php" class="space-y-4">
+                                <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" />
 
-                                        <textarea name="message"
-                                            class="textarea textarea-lg w-full placeholder:text-base-300" rows="4"
-                                            placeholder="Tell us about your cap table needs..." required></textarea>
+                                <input type="text" name="name" placeholder="Your name..."
+                                    class="input input-lg w-full placeholder:text-base-300" />
 
-                                        <button type="submit" class="btn btn-outline btn-accent btn-lg btn-block">
-                                            Send Message
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
+                                <input type="email" name="email" placeholder="Your email address.."
+                                    class="input input-lg w-full placeholder:text-base-300" required />
+
+                                <textarea name="message" class="textarea textarea-lg w-full placeholder:text-base-300"
+                                    rows="4" placeholder="Tell us about your cap table needs..."></textarea>
+
+                                <button type="submit" class="btn btn-outline btn-accent btn-lg btn-block">
+                                    Send Message
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
+        </section>
 
         <!-- Footer -->
         <footer class="footer footer-center bg-base-200 text-base-content p-10">
