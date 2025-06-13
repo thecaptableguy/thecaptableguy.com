@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (!isset($_SESSION['csrf_token'])) {
+	$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+?>
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth" data-theme="bobthere">
 
@@ -252,14 +258,13 @@
 							Your first hour is completely free
 						</h2>
 						<p class="text-lg lg:text-xl mb-8 text-base-content/70 max-w-2xl mx-auto lg:mx-0">
-							With deep expertise in structuring, modeling, and optimizing ownership stakes, Bob has
-							helped
-							hundreds of startups,
-							investors, and executives navigate complex equity scenarios with confidence and precision
+							With deep expertise in structuring, modeling, and optimizing ownership stakes,
+							Bob has helped hundreds of startups, investors, and executives navigate complex equity scenarios with confidence and precision
 						</p>
 
 						<!-- Main CTA -->
-						<form action="" method="POST" class="w-full max-w-md mx-auto lg:mx-0 mb-12">
+						<form action="/contact/opvmghihjeo.php" method="POST" class="w-full max-w-md mx-auto lg:mx-0 mb-12">
+							<input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" />
 							<fieldset class="fieldset">
 								<legend class="fieldset-legend sr-only">Request Free Consultation</legend>
 								<div class="join join-vertical w-full">
@@ -469,13 +474,18 @@
 									Message Bob
 								</h3>
 
-								<form id="message" method="POST" action="" class="space-y-4">
+								<form id="message" method="POST" action="/contact/opvmghihjeo.php" class="space-y-4">
+									<input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" />
+
+									<input type="text" name="name" placeholder="Your name..."
+										class="input input-lg w-full placeholder:text-base-300" />
+
 									<input type="email" name="email" placeholder="Your email address.."
 										class="input input-lg w-full placeholder:text-base-300" required />
 
 									<textarea name="message"
 										class="textarea textarea-lg w-full placeholder:text-base-300" rows="4"
-										placeholder="Tell us about your cap table needs..." required></textarea>
+										placeholder="Tell us about your cap table needs..."></textarea>
 
 									<button type="submit" class="btn btn-outline btn-accent btn-lg btn-block">
 										Send Message

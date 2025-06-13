@@ -44,8 +44,8 @@ if (!$mailto_client) {
 
     $headers_admin = "From: " . $mailto_client . "\r\n" .
                      'Reply-To: ' . $mailto_client . "\r\n" .
+                     'Content-Type: text/plain; charset=utf-8' . "\r\n" .
                      'X-Mailer: PHP/' . phpversion();
- 
 
     $mail_to_admin_success = mail($mailto_admin, $subject_admin, $body_admin, $headers_admin);
 
@@ -57,11 +57,12 @@ if (!$mailto_client) {
 
     $headers_client =  'From: Bob Gillespie - Cap Table Expert <bob@captableexpert.com>' . "\r\n" .
                        'Reply-To: bob@captableexpert.com' . "\r\n" .
+                       'Content-Type: text/plain; charset=utf-8' . "\r\n" .
                        'X-Mailer: PHP/' . phpversion();
 
     $mail_to_user_success = mail($mailto_client, $subject_client, $body_client, $headers_client);
 
-    if ($mail_to_user_success) {
+    if ($mail_to_user_success && $mail_to_admin_success) {
         header('Location: /#thankyou');
         exit;
     } else {
