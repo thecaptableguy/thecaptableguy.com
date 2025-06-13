@@ -65,10 +65,12 @@ if (!$mailto_client) {
     $mail_to_user_success = mail($mailto_client, $subject_client, $body_client, $headers_client);
 
     if ($mail_to_user_success && $mail_to_admin_success) {
-        header('Location: /#thankyou');
+        echo "OK ", $mail_to_user_success , $mail_to_admin_success;
+        //header('Location: /#thankyou');
         exit;
     } else {
-        header('Location: /#error');
+        // header('Location: /#error');
+        echo "ERROR ", $mail_to_user_success , $mail_to_admin_success;
         exit;
     }
 
