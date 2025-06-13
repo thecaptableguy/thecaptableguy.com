@@ -1,0 +1,8 @@
+# .htaccess in /blog/
+
+RewriteEngine On
+
+# Internal rewrite: directory-style URLs to actual .html files
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/?$ $1.html [L]
