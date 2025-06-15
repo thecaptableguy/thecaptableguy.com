@@ -1,6 +1,14 @@
 <?php
 session_start();
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
+
+require_once $_SERVER['DOCUMENT_ROOT'] . '/contact/PHPMailer/src/Exception.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/contact/PHPMailer/src/PHPMailer.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/contact/PHPMailer/src/SMTP.php';
+
 function isTooManySubmissions() {
     if (isset($_SESSION["submissions_count"])) {
         if (++$_SESSION["submissions_count"] > 2) {
@@ -15,7 +23,7 @@ function isTooManySubmissions() {
 if (
     $_SERVER['REQUEST_METHOD'] !== 'POST' ||
     empty($_POST['email']) ||
-    isTooManySubmissions() ||
+   // isTooManySubmissions() ||
     !hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])
 ) {
     header('Location: ' . ($_SERVER['HTTP_REFERER'] ? $_SERVER['HTTP_REFERER'] : '/#contact'));
@@ -30,48 +38,34 @@ if (!$mailto_client) {
     http_response_code(303);
     exit;
 }
+$mail = new PHPMailer(true);
 
-    $name_client = trim(strip_tags($_POST['name']));
+$mail->SMTPDebug = 2;
+$mail->Debugoutput = 'html';
+$mail->Timeout = 5;
 
-    $message_client = trim(strip_tags($_POST['message']));
+$mail->isSMTP();
+$mail->Host       = 'localhost';
+$mail->Port       = 25;
+$mail->SMTPAuth   = false;
+$mail->SMTPSecure = false;
+echo "Connection dump: " . $mail->smtpConnect();
 
-    $mailto_admin = "bob@captableexpert.com";
-    $subject_admin = "New contact from captableexpert.com website";
-    $body_admin = "The following email contacted you on the website captableexpert.com\r\n";
-    $body_admin .= "Email: " . $mailto_client . "\r\n";
-    $body_admin .= "Name: " . ($name_client ? $name_client : "No name provided") . "\r\n";
-    $body_admin .= "Message: " . ($message_client ? $message_client : "No message provided") . "\r\n";
-
-    $headers_admin = "From: " . $mailto_client . "\r\n" .
-                     'Reply-To: ' . $mailto_client . "\r\n" .
-                     'Content-Type: text/plain; charset=utf-8' . "\r\n" .
-                     'X-Mailer: PHP/' . phpversion();
-
-    $mail_to_admin_success = mail($mailto_admin, $subject_admin, $body_admin, $headers_admin);
-
-
-    $subject_client = "Thank You for contacting Bob Gillespie";
-    $body_client = "Hello" . ($name_client ? " " . $name_client : "") . ",\r\n";
-    $body_client .= "Thank you for contacting me on www.captableexpert.com.". "\r\n";
-    $body_client .= "I will get back to you shortly." . "\r\n";
-    $body_client .= "Best regards," . "\r\n";
-    $body_client .= "Bob Gillespie" . "\r\n";
-
-    $headers_client =  'From: Bob Gillespie - Cap Table Expert <bob@captableexpert.com>' . "\r\n" .
-                       'Reply-To: bob@captableexpert.com' . "\r\n" .
-                       'Content-Type: text/plain; charset=utf-8' . "\r\n" .
-                       'X-Mailer: PHP/' . phpversion();
-
-    $mail_to_user_success = mail($mailto_client, $subject_client, $body_client, $headers_client);
-
-    if ($mail_to_user_success && $mail_to_admin_success) {
-        echo "OK ", $mail_to_user_success , $mail_to_admin_success;
-        //header('Location: /#thankyou');
-        exit;
-    } else {
-        // header('Location: /#error');
-        echo "ERROR ", $mail_to_user_success , $mail_to_admin_success;
-        exit;
+$mail->setFrom('bob.gillespiele@captableexpert.com', 'Bob Gillespie');
+$mail->addAddress('marco.santonastasi@gmail.com', 'Marco Santonastasi');
+// set a content of "test email"
+$mail->Subject = 'Test Email from PHPMailer';
+$mail->Body    = 'This is a test email sent using PHPMailer sent directly to MS.';
+// set the email format to HTML
+$mail->isHTML(true);
+// Attempt to send the email
+try {
+    if (!$mail->send()) {
+        throw new Exception('Email could not be sent. Mailer Error: ' . $mail->ErrorInfo);
     }
+    echo 'Email has been sent successfully.';
+} catch (Exception $e) {
+    echo 'Email could not be sent. Mailer Error: ' . $e->getMessage();
+}
 
 ?>
