@@ -2,6 +2,7 @@
 session_start();
 if (!isset($_SESSION['csrf_token'])) {
 	$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
 ?>
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth" data-theme="bobthere">
@@ -24,7 +25,7 @@ if (!isset($_SESSION['csrf_token'])) {
 				<div class="flex items-center gap-3">
 					<div class="avatar">
 						<div class="size-16 rounded">
-							<img src="/static/logo.webp" alt="Cap Table Expert Logo"
+							<img src="/static/logo.webp" alt="Logo for Bob Gillespie Cap Table Expert Consultancy"
 								class="w-full h-full object-contain">
 						</div>
 					</div>
@@ -436,7 +437,7 @@ if (!isset($_SESSION['csrf_token'])) {
 							<div class="avatar">
 								<div class="w-80 rounded-full">
 									<img src="/static/BobGillespieHeadshot.webp" class="object-cover"
-										alt="Bob Gillespie" />
+										alt="Headshot of Bob Gillespie - Cap Table Specialist" />
 								</div>
 							</div>
 							<div class="mt-6">
