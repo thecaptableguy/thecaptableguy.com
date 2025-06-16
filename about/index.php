@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (!isset($_SESSION['csrf_token'])) {
+	$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+?>
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth" data-theme="bobthere">
 
@@ -415,28 +421,34 @@
                         Send Bob a message. He will get back to you promptly
                     </p>
 
-                    <div class="max-w-lg mx-auto">
-                        <div class="card bg-base-100 text-base-content shadow-2xl">
-                            <div class="card-body">
-                                <h3 class="card-title justify-center text-2xl mb-6 text-base-content">
-                                    Message Bob
-                                </h3>
+					<div class="max-w-lg mx-auto">
+						<div class="card bg-base-100 text-base-content shadow-2xl">
+							<div class="card-body">
+								<h3 class="card-title justify-center text-2xl mb-6 text-base-content">
+									Message Bob
+								</h3>
 
-                                <form id="message" method="POST" action="" class="space-y-4">
-                                    <input type="email" name="email" placeholder="Your email address.."
-                                        class="input input-lg w-full placeholder:text-base-300" required />
+								<form id="message" method="POST" action="/contact/opvmghihjeo.php" class="space-y-4">
+									<input type="hidden" name="csrf_token"
+										value="<?php echo $_SESSION['csrf_token']; ?>" />
 
-                                    <textarea name="message"
-                                        class="textarea textarea-lg w-full placeholder:text-base-300" rows="4"
-                                        placeholder="Tell us about your cap table needs..." required></textarea>
+									<input type="text" name="name" placeholder="Your name..."
+										class="input input-lg w-full placeholder:text-base-300" />
 
-                                    <button type="submit" class="btn btn-outline btn-accent btn-lg btn-block">
-                                        Send Message
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+									<input type="email" name="email" placeholder="Your email address.."
+										class="input input-lg w-full placeholder:text-base-300" required />
+
+									<textarea name="message"
+										class="textarea textarea-lg w-full placeholder:text-base-300" rows="4"
+										placeholder="Tell us about your cap table needs..."></textarea>
+
+									<button type="submit" class="btn btn-outline btn-accent btn-lg btn-block">
+										Send Message
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
                 </div>
             </div>
         </main>
