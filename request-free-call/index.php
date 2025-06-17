@@ -9,54 +9,55 @@ function redirectError() {
 }
 
 // main script
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (empty($_POST['csrf_token']) || empty($_POST['email'])) {
-    error_log("Invalid request method or missing parameters: " . $_SERVER['REQUEST_METHOD'] . ", CSRF token: " . $_POST['csrf_token'] . ", Email: " . $_POST['email']);
-    redirectError();
-    exit;
-}
-
 session_start();
 
-if(empty($_SESSION['csrf_token']) || !hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
-    error_log("Invalid CSRF token: " . $_POST['csrf_token'] . " (expected: " . $_SESSION['csrf_token'] . ")");
-    redirectError();
-    exit;
-}
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-if (!filter_var(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL), FILTER_SANITIZE_EMAIL)) {
-    error_log("Invalid email address: " . $_POST['email']);
-    redirectError();
-    exit;
-}
+    if (empty($_SESSION['free_call_requested'])) {
 
-setcookie('free_call_requested', date('Y-m-d'), time() + (30 * 24 * 60 * 60), '/'); // Expire 30 days
+        if (empty($_POST['csrf_token']) || empty($_POST['email'])) {
+            error_log("Invalid request method or missing parameters: " . $_SERVER['REQUEST_METHOD'] . ", CSRF token: " . $_POST['csrf_token'] . ", Email: " . $_POST['email']);
+            redirectError();
+            exit;
+        }
+        
+        if (empty($_SESSION['csrf_token']) || !hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
+            error_log("Invalid CSRF token: " . $_POST['csrf_token'] . " (expected: " . $_SESSION['csrf_token'] . ")");
+            redirectError();
+                exit;
+        }
 
-$mailto_client = $_POST['email'];
-$name_client = !empty($_POST['name']) ? filter_var($_POST['name'], FILTER_SANITIZE_STRING) : null;
-$message_client = !empty($_POST['message']) ? filter_var($_POST['message'], FILTER_SANITIZE_STRING) : null;
+        if (!filter_var(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL), FILTER_SANITIZE_EMAIL)) {
+            error_log("Invalid email address: " . $_POST['email']);
+            redirectError();
+            exit;
+        }
 
-// background process
-$background_script = __DIR__ . '/background.php';
-$php_binary = PHP_BINARY;
+        $_SESSION['free_call_requested'] = date('Y-m-d');
 
-$command = sprintf(
-    '%s %s %s %s %s > /dev/null 2>&1 &',
-    escapeshellarg($php_binary),
-    escapeshellarg($background_script),
-    escapeshellarg($mailto_client),
-    escapeshellarg($name_client),
-    escapeshellarg($message_client)
-);
+        $mailto_client = $_POST['email'];
+        $name_client = !empty($_POST['name']) ? filter_var($_POST['name'], FILTER_SANITIZE_STRING) : null;
+        $message_client = !empty($_POST['message']) ? filter_var($_POST['message'], FILTER_SANITIZE_STRING) : null;
 
-exec($command);
+        $background_script = __DIR__ . '/background.php';
+        $php_binary = PHP_BINARY;
 
+        $command = sprintf(
+            '%s %s %s %s %s > /dev/null 2>&1 &',
+            escapeshellarg($php_binary),
+            escapeshellarg($background_script),
+            escapeshellarg($mailto_client),
+            escapeshellarg($name_client),
+            escapeshellarg($message_client)
+        );
+
+        exec($command);
+    }
 } else {
 
-session_start();
-if (empty($_SESSION['csrf_token'])) {
-    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-}
+    if (empty($_SESSION['csrf_token'])) {
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    }
 }
 
 ?>
@@ -104,7 +105,7 @@ if (empty($_SESSION['csrf_token'])) {
     </header>
 
     <main>
-        <?php if ($_SERVER['REQUEST_METHOD'] === 'POST'): ?>
+        <?php if (!empty($_SESSION['free_call_requested'])): ?>
             <!-- Thank You / Success Page -->
             <div class="hero min-h-screen bg-gradient-to-br from-base-100 to-base-200">
                 <div class="hero-content text-center">
@@ -125,6 +126,18 @@ if (empty($_SESSION['csrf_token'])) {
                                 <p class="text-xl text-base-content/80 mb-8 leading-relaxed">
                                     Your message has been received. Bob will personally review your submission and get back to you within 24 hours.
                                 </p>
+
+                                <div class="alert alert-soft alert-success mb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <div>
+                                        <h3 class="font-bold">Request Submitted</h3>
+                                        <div class="text-sm">
+                                            Consultation requested on <?php echo date('F j, Y', strtotime($_SESSION['free_call_requested'])); ?>
+                                        </div>
+                                    </div>
+                                </div>
 
                                 <div class="alert alert-soft alert-info mb-8">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
