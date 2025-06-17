@@ -3,7 +3,6 @@ session_start();
 if (!isset($_SESSION['csrf_token'])) {
 	$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
-session_write_close();
 ?>
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth" data-theme="bobthere">
@@ -470,7 +469,7 @@ session_write_close();
 						</p>
 
 						<!-- Main CTA -->
-						<form action="/contact/opvmghihjeo.php" method="POST"
+						<form action="/request-free-call/" method="POST"
 							class="w-full max-w-md mx-auto lg:mx-0 mb-12">
 							<input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" />
 							<fieldset class="fieldset">
@@ -683,7 +682,7 @@ session_write_close();
 									Message Bob
 								</h3>
 
-								<form id="message" method="POST" action="/contact/opvmghihjeo.php" class="space-y-4">
+								<form id="message" method="POST" action="/request-free-call/" class="space-y-4">
 									<input type="hidden" name="csrf_token"
 										value="<?php echo $_SESSION['csrf_token']; ?>" />
 
