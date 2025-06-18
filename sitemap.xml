@@ -12,6 +12,14 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Free Consultaion Page -->
+  <url>
+    <loc>https://www.captableexpert.com/request-free-call/</loc>
+    <lastmod>2025-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- About Page -->
   <url>
     <loc>https://www.captableexpert.com/about/</loc>
@@ -25,7 +33,7 @@
     <loc>https://www.captableexpert.com/blog/</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.7</priority>
   </url>
 
   <!-- Blog Posts - Directory-style URIs (Canonical) -->

@@ -1,61 +1,188 @@
 <!-- Free Call Request Form -->
 <div class="min-h-screen bg-base-100 flex items-center justify-center p-4">
-    <div class="max-w-lg w-full">
-        <div class="text-center mb-8">
+    <div class="max-w-6xl w-full">
+        <div class="text-center mb-8 lg:hidden">
             <h1 class="text-3xl font-bold text-base-content mb-4">Request Free Consultation</h1>
             <p class="text-base-content/70">
                 Get expert cap table guidance from Bob Gillespie. One-hour consultation, completely free.
             </p>
         </div>
 
-        <div class="card bg-base-100 shadow-sm border border-base-300">
-            <form method="POST" action="/request-free-call/" class="card-body p-6">
-                <input type="hidden" name="csrf_token" value="<!--#echo var='csrf_token' -->">
-
-                <div class="space-y-4">
-
-                    <!-- Email Field -->
-                    <div>
-                        <label for="email" class="label">
-                            <span class="label-text font-medium">Email Address</span>
-                            <span class="label-text-alt text-error">*</span>
-                        </label>
-                        <input type="email" name="email"
-                            class="input input-bordered w-full validator focus:border-base-300 hover:border-base-300"
-                            placeholder="your.email@company.com" required value="<!--#echo var='mailto_client' -->" />
-                    </div>
-
-                    <!-- Name Field -->
-                    <div>
-                        <label for="name" class="label">
-                            <span class="label-text font-medium">Name</span>
-                        </label>
-                        <input type="text" name="name"
-                            class="input input-bordered w-full focus:border-base-300 hover:border-base-300"
-                            placeholder="Your name or company name" value="<!--#echo var='name_client' -->" />
-                    </div>
-
-                    <!-- Message Field -->
-                    <div>
-                        <label for="message" class="label">
-                            <span class="label-text font-medium">Message</span>
-                        </label>
-                        <textarea name="message"
-                            class="textarea textarea-bordered w-full h-24 focus:border-base-300 hover:border-base-300"
-                            placeholder="Tell Bob about your cap table situation, specific questions, or challenges you're facing."><!--#echo var='message_client' --></textarea>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <button type="submit" class="btn btn-accent w-full">
-                        Request Free Consultation
-                    </button>
-
-                    <!-- Privacy Notice -->
-                    <p class="text-xs text-base-content/60 text-center">
-                        Your information is secure and will only be used to contact you about your consultation.
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <!-- Form Section -->
+            <div class="order-2 lg:order-1">
+                <div class="hidden lg:block mb-8">
+                    <h1 class="text-3xl font-bold text-base-content mb-4">Request Free Consultation</h1>
+                    <p class="text-base-content/70">
+                        Get expert cap table guidance from Bob Gillespie. One-hour consultation, completely free.
                     </p>
                 </div>
-            </form>
+
+                <div class="card bg-base-100 shadow-sm border border-base-300">
+                    <form method="POST" action="/request-free-call/" class="card-body p-6">
+                        <input type="hidden" name="csrf_token" value="<!--#echo var='csrf_token' -->">
+
+                        <div class="space-y-4">
+
+                            <!-- Email Field -->
+                            <div>
+                                <label for="email" class="label">
+                                    <span class="label-text font-medium">Email Address</span>
+                                    <span class="label-text-alt text-error">*</span>
+                                </label>
+                                <input type="email" name="email"
+                                    class="input input-bordered w-full validator focus:border-base-300 hover:border-base-300"
+                                    placeholder="your.email@company.com" required
+                                    value="<!--#echo var='mailto_client' -->" />
+                            </div>
+
+                            <!-- Name Field -->
+                            <div>
+                                <label for="name" class="label">
+                                    <span class="label-text font-medium">Name</span>
+                                </label>
+                                <input type="text" name="name"
+                                    class="input input-bordered w-full focus:border-base-300 hover:border-base-300"
+                                    placeholder="Your name or company name" value="<!--#echo var='name_client' -->" />
+                            </div>
+
+                            <!-- Message Field -->
+                            <div>
+                                <label for="message" class="label">
+                                    <span class="label-text font-medium">Message</span>
+                                </label>
+                                <textarea name="message"
+                                    class="textarea textarea-bordered w-full h-24 focus:border-base-300 hover:border-base-300"
+                                    placeholder="Tell Bob about your cap table situation, specific questions, or challenges you're facing."><!--#echo var='message_client' --></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-accent w-full">
+                                Request Free Consultation
+                            </button>
+
+                            <!-- Privacy Notice -->
+                            <p class="text-xs text-base-content/60 text-center">
+                                Your information is secure and will only be used to contact you about your consultation.
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Information Section -->
+            <div class="order-1 lg:order-2">
+                <div class="card bg-gradient-to-br from-base-200/50 to-base-300/30 border border-base-300 shadow-lg">
+                    <div class="card-body p-6">
+                        <!-- Bob's Picture and Intro -->
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="avatar">
+                                <div class="size-16 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                    <img src="/static/BobGillespieHeadshot.webp" alt="Bob Gillespie"
+                                        class="object-cover" />
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="text-xl font-bold text-base-content">Meet Bob Gillespie</h2>
+                                <p class="text-sm text-base-content/70">Cap Table Expert & Consultant</p>
+                            </div>
+                        </div>
+
+                        <div class="divider my-4">
+                            <span class="text-xs font-medium text-base-content/60">YOUR FREE CONSULTATION
+                                INCLUDES</span>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="size-8 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
+                                    <svg class="size-4 text-primary-content" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="font-semibold text-base-content">One-Hour Deep Dive</h3>
+                                    <p class="text-sm text-base-content/70 leading-relaxed">Comprehensive review of your
+                                        cap table
+                                        structure and equity strategy</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="size-8 bg-gradient-to-br from-secondary to-secondary/80 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
+                                    <svg class="size-4 text-secondary-content" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="font-semibold text-base-content">Personalized Insights</h3>
+                                    <p class="text-sm text-base-content/70 leading-relaxed">Tailored recommendations for
+                                        your specific
+                                        situation and goals</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="size-8 bg-gradient-to-br from-accent to-accent/80 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
+                                    <svg class="size-4 text-accent-content" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="font-semibold text-base-content">Expert Guidance</h3>
+                                    <p class="text-sm text-base-content/70 leading-relaxed">Avoid costly mistakes with
+                                        professional cap
+                                        table expertise</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="size-8 bg-gradient-to-br from-success to-success/80 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
+                                    <svg class="size-4 text-success-content" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="font-semibold text-base-content">No Obligation</h3>
+                                    <p class="text-sm text-base-content/70 leading-relaxed">Completely free consultation
+                                        with no strings
+                                        attached</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="divider my-6"></div>
+
+                        <!-- Response Time Card -->
+                        <div class="bg-gradient-to-r from-info/10 to-info/5 border border-info/20 rounded-xl p-4">
+                            <div class="flex items-start gap-3">
+                                <div class="size-8 bg-info rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="size-4 text-info-content" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="font-semibold text-info mb-1">Typically responds within 24 hours</p>
+                                    <p class="text-xs text-base-content/70 leading-relaxed">Bob personally reviews every
+                                        request and will follow up quickly to schedule your consultation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
