@@ -1,8 +1,0 @@
-[18-Jun-2025 15:32:23 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: Invalid address:  (to): ms@faoisdh in /home/jg2j87691jbz/public_html/request-free-call/PHPMailer/src/PHPMailer.php:1211
-Stack trace:
-#0 [internal function]: PHPMailer\PHPMailer\PHPMailer->addAnAddress()
-#1 /home/jg2j87691jbz/public_html/request-free-call/PHPMailer/src/PHPMailer.php(1145): call_user_func_array()
-#2 /home/jg2j87691jbz/public_html/request-free-call/PHPMailer/src/PHPMailer.php(1032): PHPMailer\PHPMailer\PHPMailer->addOrEnqueueAnAddress()
-#3 /home/jg2j87691jbz/public_html/request-free-call/background.php(43): PHPMailer\PHPMailer\PHPMailer->addAddress()
-#4 {main}
-  thrown in /home/jg2j87691jbz/public_html/request-free-call/PHPMailer/src/PHPMailer.php on line 1211
