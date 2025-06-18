@@ -12,17 +12,22 @@ if (!isset($_SESSION['csrf_token'])) {
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Bob Gillespie - Cap Table Specialist - Free 1-Hour Consultation</title>
 		<link rel="canonical" href="https://www.captableexpert.com/" />
+		<meta name="robots" content="index, follow">
 		<meta name="description"
 			content="Get expert cap table advice from Bob. Book your free one-hour consultation and avoid costly equity mistakes.">
 		<link rel="icon" type="image/png" href="/static/favicon.png" />
 		<link href="/static/styles.css" rel="stylesheet" type="text/css" />
-		<!--#include virtual="/fragments/structured-data.fragment.php" -->
+
+		<!--#include virtual="/fragments/og/homepage.og.html" -->
+		<!--#include virtual="/fragments/strd/homepage.strd.html" -->
+
 	</head>
 
 	<body>
 
 		<!-- Header -->
-		<!--#include virtual="/fragments/header.fragment.php" -->
+		<!--#set var="header_cta" value="free_call" -->
+		<!--#include virtual="/fragments/html/header-global.fragment.html" -->
 
 		<main>
 			<!-- Hero Section -->
@@ -429,12 +434,12 @@ if (!isset($_SESSION['csrf_token'])) {
 
 			<!-- Contact Section -->
 			<!--#set var='csrf_token' value="<?php echo $_SESSION['csrf_token']; ?>" -->
-			<!--#include virtual="/fragments/contact-full.fragment.html" -->
-		
+			<!--#include virtual="/fragments/html/contact-form-full.fragment.html" -->
+			
 		</main>
 	    
 		<!-- Footer -->
-	    <!--#include virtual="/fragments/footer.fragment.php" -->
+	    <!--#include virtual="/fragments/html/footer-global.fragment.html" -->
 
 	</body>
 

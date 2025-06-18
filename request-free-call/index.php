@@ -77,32 +77,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body class="bg-base-100">
-    <!-- Navigation -->
-    <header class="navbar bg-base-100 border-b border-base-300">
-        <nav class="navbar-start">
-            <div class="flex items-center gap-3">
-                <div class="avatar">
-                    <div class="size-16 rounded">
-                        <img src="/static/logo.webp" alt="Logo for Bob Gillespie Cap Table Expert Consultancy"
-                            class="w-full h-full object-contain">
-                    </div>
-                </div>
-                <div>
-                    <div class="text-lg font-semibold text-base-content">Bob Gillespie</div>
-                    <div class="text-xs text-base-content/60">Cap Table Specialist - Consultancy Services</div>
-                </div>
-            </div>
-        </nav>
-        <nav class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1 text-sm">
-                <li><a href="/about" class="text-base-content/70 hover:text-primary">About</a></li>
-                <li><a href="/blog" class="text-base-content/70 hover:text-primary">Blog</a></li>
-            </ul>
-        </nav>
-        <nav class="navbar-end">
-            <a href="/" class="btn btn-accent btn-sm font-bold">Home</a>
-        </nav>
-    </header>
+
+		<!-- Header -->
+        <!--#set var='header_cta' value="home" -->
+		<!--#include virtual="/fragments/header.fragment.html" -->
+
 
     <main>
         <?php if (!empty($_SESSION['free_call_requested'])): ?>
@@ -121,27 +100,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php endif; ?>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer footer-center bg-base-200 text-base-content p-10">
-        <div>
-            <div class="avatar">
-                <div class="size-28 rounded">
-                    <img src="/static/logo.webp" alt="Cap Table Expert Logo" class="w-full h-full object-contain">
-                </div>
-            </div>
-            <p class="font-bold text-lg text-base-content">Bob Gillespie</p>
-            <p class="text-base-content/70">Cap Table Expert • Helping startups since 2008</p>
-        </div>
-        <div>
-            <div class="grid grid-flow-col gap-4">
-                <a href="/about" class="link link-hover text-base-content/70 hover:text-primary">About</a>
-                <a href="/blog" class="link link-hover text-base-content/70 hover:text-primary">Blog</a>
-            </div>
-        </div>
-        <div>
-            <p class="text-base-content/60">© 2008-present Bob Gillespie. All rights reserved.</p>
-        </div>
-    </footer>
+		<!-- Footer -->
+	    <!--#include virtual="/fragments/footer.fragment.html" -->
+
 </body>
 
 </html>
