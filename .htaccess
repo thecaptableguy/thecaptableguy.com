@@ -1,0 +1,9 @@
+# Enable Server Side Includes (SSI)
+Options +Includes
+
+# Enable SSI for PHP files (after PHP processing)
+AddOutputFilter INCLUDES .php
+
+# Enable SSI for HTML files as well
+AddType text/html .html
+AddOutputFilter INCLUDES .html
