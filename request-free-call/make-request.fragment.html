@@ -1,0 +1,130 @@
+<!-- Free Call Request Form -->
+<div class="hero min-h-screen bg-gradient-to-br from-base-100 to-base-200">
+    <div class="hero-content flex-col lg:flex-row-reverse max-w-6xl w-full">
+        <!-- Information Section -->
+        <div class="text-center lg:text-left lg:w-1/2">
+            <h1 class="text-5xl font-bold text-primary mb-6">Request Your Free Cap Table Consultation</h1>
+            <p class="text-lg mb-6 leading-relaxed">
+                Get expert guidance from Bob Gillespie, a seasoned cap table specialist with years of experience helping
+                startups and growing companies navigate complex equity structures, fundraising rounds, and avoid costly
+                mistakes.
+            </p>
+
+            <div class="space-y-4 mb-8">
+                <div class="flex items-start gap-3">
+                    <div class="badge badge-primary badge-sm mt-1">✓</div>
+                    <div>
+                        <h3 class="font-semibold">One-Hour Deep Dive</h3>
+                        <p class="text-sm text-base-content/70">Comprehensive review of your cap table structure and
+                            equity strategy</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="badge badge-primary badge-sm mt-1">✓</div>
+                    <div>
+                        <h3 class="font-semibold">Personalized Insights</h3>
+                        <p class="text-sm text-base-content/70">Tailored recommendations for your specific situation and
+                            goals</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="badge badge-primary badge-sm mt-1">✓</div>
+                    <div>
+                        <h3 class="font-semibold">No Obligation</h3>
+                        <p class="text-sm text-base-content/70">Completely free consultation with no strings attached
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                    <h3 class="font-bold">Typically responds within 24 hours</h3>
+                    <div class="text-xs">Bob personally reviews every request and will follow up quickly to schedule
+                        your consultation</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Section -->
+        <div class="card bg-base-100 w-full max-w-lg shadow-2xl lg:w-1/2">
+            <form method="POST" action="/request-free-call/" class="card-body">
+                <input type="hidden" name="csrf_token" value="<!--#echo var='csrf_token' -->">
+
+                <fieldset class="fieldset space-y-6">
+                    <legend class="fieldset-legend text-xl font-semibold mb-4">Tell Bob About Your Situation</legend>
+
+                    <!-- Email Field -->
+                    <div>
+                        <label for="email" class="input input-bordered flex items-center gap-2">
+                            <svg class="h-4 w-4 opacity-70" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                fill="currentColor">
+                                <path
+                                    d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
+                                <path
+                                    d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
+                            </svg>
+                            <input type="email" name="email" class="input validator"
+                                placeholder="your.email@company.com" required
+                                value="<!--#echo var='mailto_client' -->" />
+                        </label>
+                        <label class="label">
+                            <span class="label-text-alt">Required - This is how Bob will contact you</span>
+                        </label>
+                    </div>
+
+                    <!-- Name Field -->
+                    <div>
+                        <label for="name" class="input input-bordered flex items-center gap-2">
+                            <svg class="h-4 w-4 opacity-70" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                fill="currentColor">
+                                <path
+                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
+                            </svg>
+                            <input type="text" name="name" class="input" placeholder="Your name or company name"
+                                value="<!--#echo var='name_client' -->" />
+                        </label>
+                        <label class="label">
+                            <span class="label-text-alt">Optional - Helps personalize the consultation</span>
+                        </label>
+                    </div>
+
+                    <!-- Message Field -->
+                    <div>
+                        <textarea name="message" class="textarea textarea-bordered w-full h-32"
+                            placeholder="Tell Bob about your cap table situation, specific questions, or challenges you're facing. The more details you provide, the better he can prepare for your consultation."><!--#echo var='message_client' --></textarea>
+                        <label class="label">
+                            <span class="label-text-alt">Optional - Share your questions and challenges</span>
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-control mt-6">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    d="M3.105 2.289a.75.75 0 0 0-.826.95l1.414 4.926A1.5 1.5 0 0 0 5.135 9.25h6.115a.75.75 0 0 1 0 1.5H5.135a1.5 1.5 0 0 0-1.442 1.086l-1.414 4.926a.75.75 0 0 0 .826.95 28.897 28.897 0 0 0 15.293-7.155.75.75 0 0 0 0-1.114A28.897 28.897 0 0 0 3.105 2.289Z" />
+                            </svg>
+                            Request Free Consultation
+                        </button>
+                    </div>
+
+                    <!-- Privacy Notice -->
+                    <div class="text-center mt-4">
+                        <p class="text-xs text-base-content/60">
+                            Your information is secure and will only be used to contact you about your consultation
+                            request.
+                            Bob does not share contact information with third parties.
+                        </p>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
