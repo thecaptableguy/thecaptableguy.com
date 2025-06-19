@@ -12,7 +12,7 @@ if (!isset($_SESSION['csrf_token'])) {
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>The Anatomy of a Clean Cap Table — What Investors Want to See</title>
-        <link rel="canonical" href="https://www.captableexpert.com/blog/anatomy-cap-table/" />
+        <link rel="canonical" href="https://www.captableexpert.com/blog/cap-table-anatomy/" />
         <link rel="shortcut icon" href="/static/favicon.png" type="image/png">
         <link rel="stylesheet" href="/static/styles.css">
     </head>

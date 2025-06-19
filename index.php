@@ -392,7 +392,7 @@ if (!isset($_SESSION['csrf_token'])) {
 			<!-- Contact Section -->
 			<!--#set var='csrf_token' value="<?php echo $_SESSION['csrf_token']; ?>" -->
 			<!--#include virtual="/fragments/html/contact-form-full.fragment.html" -->
-			
+
 		</main>
 	    
 		<!-- Footer -->
