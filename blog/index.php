@@ -149,16 +149,15 @@ if (!isset($_SESSION['csrf_token'])) {
                         </a>
                     </article>
                 </div>
-                
-                <!-- Contact Section -->
-                <!--#set var='csrf_token' value="<?php echo $_SESSION['csrf_token']; ?>" -->
-                <!--#include virtual="/fragments/html/contact-form-full.fragment.html" -->
-                
             </div>
         </main>
-
-		<!-- Footer -->
-	    <!--#include virtual="/fragments/html/footer-global.fragment.html" -->
+                    
+                    <!-- Contact Section -->
+                    <!--#set var='csrf_token' value="<?php echo $_SESSION['csrf_token']; ?>" -->
+                    <!--#include virtual="/fragments/html/contact-form-full.fragment.html" --> 
+                    
+                    <!-- Footer -->
+                    <!--#include virtual="/fragments/html/footer-global.fragment.html" -->
 
     </body>
 
