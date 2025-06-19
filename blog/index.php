@@ -60,6 +60,23 @@ if (!isset($_SESSION['csrf_token'])) {
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                     <!-- Blog Post 1 -->
                     <article class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300 group">
+                        <a href="/blog/cap-table-anatomy/" class="card-body p-8 block">
+                            <div class="badge badge-outline badge-accent mb-4">Cap Table Fundamentals</div>
+                            <h2 class="card-title text-xl mb-2 group-hover:text-primary transition-colors">
+                                The Anatomy of a Clean Cap Table — What Investors Want to See
+                            </h2>
+                            <span class="text-sm text-base-content/50 mb-4 block">By Bob Gillespie</span>
+                            <p class="text-base-content/70 mb-6">
+                                A comprehensive guide to building and maintaining a clean cap table that signals professionalism and attracts investors.
+                            </p>
+                            <div
+                                class="text-xs text-black mt-2 hover:text-secondary hover:translate-x-3 hover:scale-105 hover:font-bold transition-all duration-300 ease-out">
+                                Click to read more →</div>
+                        </a>
+                    </article>
+
+                <!-- Blog Post 1 -->
+                    <article class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300 group">
                         <a href="/blog/most-expensive-mistakes/" class="card-body p-8 block">
                             <div class="badge badge-outline badge-accent mb-4">Cap Table Strategy</div>
                             <h2 class="card-title text-xl mb-2 group-hover:text-primary transition-colors">
