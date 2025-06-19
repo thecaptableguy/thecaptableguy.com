@@ -33,8 +33,27 @@ if (!isset($_SESSION['csrf_token'])) {
 			<!-- Hero Section -->
 			<div class="hero min-h-screen bg-base-100">
 				<div class="hero-content flex-col lg:flex-row-reverse max-w-7xl px-4 gap-12">
+					
 					<!-- Right side - Excel-like Spreadsheet -->
-					<div class="hidden lg:flex flex-1 lg:max-w-4xl perspective-distant">
+					<div class="hidden lg:flex flex-col flex-1 lg:max-w-4xl perspective-distant gap-6">
+
+						<!-- Minimal Social Proof Stats -->
+						<div
+							class="w-full flex flex-col lg:flex-row justify-center gap-8 lg:gap-12 text-center bg-base-200/50 rounded-lg p-6 lg:p-8">
+							<div class="flex-1">
+								<div class="text-sm text-secondary/80 font-medium mb-2">Startups helped</div>
+								<div class="text-3xl lg:text-4xl font-black text-secondary tracking-tight">100+</div>
+							</div>
+							<div class="flex-1">
+								<div class="text-sm lg:text-base text-secondary/80 font-medium mb-2">Companies Portfolio</div>
+								<div class="text-3xl lg:text-4xl font-black text-secondary tracking-tight">70+</div>
+							</div>
+							<div class="flex-1">
+								<div class="text-sm lg:text-base text-secondary/80 font-medium mb-2">Years</div>
+								<div class="text-3xl lg:text-4xl font-black text-secondary tracking-tight">30+</div>
+							</div>
+						</div>
+
 						<!-- Excel Window Frame -->
 						<div
 							class="bg-base-100 shadow-xl border border-base-300 rounded-lg overflow-hidden transform-3d rotate-x-15 -rotate-y-4 rotate-z-6">
@@ -179,7 +198,8 @@ if (!isset($_SESSION['csrf_token'])) {
 							</div>
 						</div>
 					</div>
-					<!-- Left side - Content -->
+
+					<!-- Left side - Carousel -->
 					<div class="flex-1 text-center lg:text-left">
 						<h1 class="text-4xl lg:text-5xl font-bold text-base-content leading-tight mb-6">
 							Get Your Cap Table
@@ -216,23 +236,6 @@ if (!isset($_SESSION['csrf_token'])) {
 								</div>
 							</fieldset>
 						</form>
-
-						<!-- Minimal Social Proof Stats -->
-						<div
-							class="flex flex-col lg:flex-row justify-center lg:justify-start gap-6 lg:gap-4 text-center lg:text-left">
-							<div class="flex-shrink-0 lg:flex-shrink">
-								<div class="text-sm lg:text-xs text-base-content/70">Startups helped</div>
-								<div class="text-2xl lg:text-xl font-bold text-primary">100+</div>
-							</div>
-							<div class="flex-shrink-0 lg:flex-shrink">
-								<div class="text-sm lg:text-xs text-base-content/70">Companies Portfolio</div>
-								<div class="text-2xl lg:text-xl font-bold text-primary">70+</div>
-							</div>
-							<div class="flex-shrink-0 lg:flex-shrink">
-								<div class="text-sm lg:text-xs text-base-content/70">Years</div>
-								<div class="text-2xl lg:text-xl font-bold text-primary">30+</div>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
