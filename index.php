@@ -47,8 +47,7 @@ if (!isset($_SESSION['csrf_token'])) {
 										<div class="w-3 h-3 rounded-full bg-yellow-500"></div>
 										<div class="w-3 h-3 rounded-full bg-green-500"></div>
 									</div>
-									<span class="text-sm font-medium text-base-content ml-2">Microsoft Excel -
-										CapTable.xlsx</span>
+									<span class="text-sm font-medium text-base-content ml-2">Microsoft Excel - CapTable.xlsx</span>
 								</div>
 							</div>
 
@@ -71,106 +70,77 @@ if (!isset($_SESSION['csrf_token'])) {
 										class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/70">
 									</div>
 									<div
-										class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/70">
-										A</div>
+										class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/70">A</div>
 									<div
-										class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/70">
-										B</div>
+										class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/70">B</div>
 									<div
-										class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/70">
-										C</div>
+										class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/70">C</div>
 									<div
-										class="bg-base-200 px-3 py-2 text-center text-xs font-medium text-base-content/70">
-										D</div>
+										class="bg-base-200 px-3 py-2 text-center text-xs font-medium text-base-content/70">D</div>
 								</div>
 
 								<!-- Row 1 - Headers -->
 								<div class="grid grid-cols-5 border-b border-base-200">
 									<div
-										class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">
-										1</div>
+										class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">1</div>
 									<div
-										class="border-r border-base-200 px-3 py-2 text-xs font-semibold text-base-content">
-										Shareholder</div>
+										class="border-r border-base-200 px-3 py-2 text-xs font-semibold text-base-content">Shareholder</div>
 									<div
-										class="border-r border-base-200 px-3 py-2 text-xs font-semibold text-base-content">
-										Shares</div>
+										class="border-r border-base-200 px-3 py-2 text-xs font-semibold text-base-content">Shares</div>
 									<div
-										class="border-r border-base-200 px-3 py-2 text-xs font-semibold text-base-content">
-										Ownership %</div>
+										class="border-r border-base-200 px-3 py-2 text-xs font-semibold text-base-content">Ownership %</div>
 									<div class="px-3 py-2 text-xs font-semibold text-base-content">Value</div>
 								</div>
 
 								<!-- Row 2 -->
 								<div class="grid grid-cols-5 border-b border-base-200">
 									<div
-										class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">
-										2</div>
-									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">John
-										Doe
-										(Founder)
+										class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">2</div>
+									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">John Doe (Founder)
 									</div>
-									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">
-										4,500,000
+									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">$4,500,000
 									</div>
 									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">45.0%
 									</div>
-									<div class="px-3 py-2 text-xs text-base-content/70">$4,500,000</div>
+									<div class="px-3 py-2 text-xs text-base-content/70">$4,500,000
+									</div>
 								</div>
 
 								<!-- Row 3 -->
 								<div class="grid grid-cols-5 border-b border-base-200">
 									<div
-										class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">
-										3</div>
-									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">Jane
-										Smith
-										(Co-founder)</div>
-									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">
-										3,500,000
-									</div>
-									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">35.0%
-									</div>
+										class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">3</div>
+
+									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">Jane Smith (Co-founder)</div>
+									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">$3,500,000</div>
+									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">35.0%</div>
 									<div class="px-3 py-2 text-xs text-base-content/70">$3,500,000</div>
 								</div>
 
 								<!-- Row 4 -->
 								<div class="grid grid-cols-5 border-b border-base-200">
 									<div
-										class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">
-										4</div>
-									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">Venture
-										Capital
-										LLC</div>
-									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">
-										1,500,000
-									</div>
-									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">15.0%
-									</div>
+										class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">4</div>
+									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">Venture Capital LLC</div>
+									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">$1,500,000</div>
+									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">15.0%</div>
 									<div class="px-3 py-2 text-xs text-base-content/70">$1,500,000</div>
 								</div>
 
 								<!-- Row 5 -->
 								<div class="grid grid-cols-5 border-b border-base-200">
 									<div
-										class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">
-										5</div>
-									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">
-										Employee
-										Pool
-									</div>
-									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">500,000
-									</div>
-									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">5.0%
-									</div>
+										class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">5</div>
+									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">Employee Pool</div>
+									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">$500,000</div>
+									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/70">5.0%</div>
 									<div class="px-3 py-2 text-xs text-base-content/70">$500,000</div>
 								</div>
 
 								<!-- Row 6 - Empty -->
 								<div class="grid grid-cols-5 border-b border-base-200">
 									<div
-										class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">
-										6</div>
+										class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">6</div>
 									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/30"></div>
 									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/30"></div>
 									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/30"></div>
@@ -180,25 +150,20 @@ if (!isset($_SESSION['csrf_token'])) {
 								<!-- Row 7 - Total -->
 								<div class="grid grid-cols-5 border-b border-base-200 bg-base-200">
 									<div
-										class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">
-										7</div>
+										class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">7</div>
 									<div
-										class="border-r border-base-200 px-3 py-2 text-xs font-semibold text-base-content">
-										TOTAL</div>
+										class="border-r border-base-200 px-3 py-2 text-xs font-semibold text-base-content">TOTAL</div>
 									<div
-										class="border-r border-base-200 px-3 py-2 text-xs font-semibold text-base-content">
-										10,000,000</div>
+										class="border-r border-base-200 px-3 py-2 text-xs font-semibold text-base-content">$10,000,000</div>
 									<div
-										class="border-r border-base-200 px-3 py-2 text-xs font-semibold text-base-content">
-										100.0%</div>
+										class="border-r border-base-200 px-3 py-2 text-xs font-semibold text-base-content">100.0%</div>
 									<div class="px-3 py-2 text-xs font-semibold text-base-content">$10,000,000</div>
 								</div>
 
 								<!-- Additional empty rows -->
 								<div class="grid grid-cols-5 border-b border-base-200">
 									<div
-										class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">
-										8</div>
+										class="bg-base-200 border-r border-base-300 px-3 py-2 text-center text-xs font-medium text-base-content/60">8</div>
 									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/30"></div>
 									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/30"></div>
 									<div class="border-r border-base-200 px-3 py-2 text-xs text-base-content/30"></div>
@@ -292,8 +257,7 @@ if (!isset($_SESSION['csrf_token'])) {
 									<div class="badge badge-outline badge-secondary badge-sm mr-2">Startup Founder</div>
 								</div>
 								<p class="text-base-content/80 italic">
-									"Bob is a genius on this stuff. He just knows exactly what's going on—and let's face
-									it,
+									"Bob is a genius on this stuff. He just knows exactly what's going on—and let's face it,
 									cap tables are not the place to make mistakes. You can't go wrong with Bob. 15 on a
 									scale of 1 to 10!"
 								</p>
@@ -309,8 +273,7 @@ if (!isset($_SESSION['csrf_token'])) {
 								<p class="text-base-content/80 italic">
 									"Bob is an amazing professional, with exceptional deep knowledge of cap tables,
 									startups, deal structures, funding, and finance. Our specific situation is complex,
-									and
-									Bob helped us untangle things."
+									and Bob helped us untangle things."
 								</p>
 							</div>
 						</div>
@@ -323,8 +286,7 @@ if (!isset($_SESSION['csrf_token'])) {
 								</div>
 								<p class="text-base-content/80 italic">
 									"Great working with Bob! He really knows his stuff. Something that seemed very
-									complex,
-									he managed to get done within a few hours."
+									complex, he managed to get done within a few hours."
 								</p>
 							</div>
 						</div>
@@ -336,10 +298,8 @@ if (!isset($_SESSION['csrf_token'])) {
 									<div class="badge badge-outline badge-secondary badge-sm mr-2">VC Partner</div>
 								</div>
 								<p class="text-base-content/80 italic">
-									"Bob is a fantastic VC who gives back to his community and helps up-and-coming
-									companies
-									succeed with his insight. He is very easy to work with, and this was an educational
-									experience."
+									"Bob is a fantastic VC who gives back to his community and helps up-and-coming companies
+									succeed with his insight. He is very easy to work with, and this was an educational experience."
 								</p>
 							</div>
 						</div>
@@ -351,10 +311,8 @@ if (!isset($_SESSION['csrf_token'])) {
 									<div class="badge badge-outline badge-secondary badge-sm mr-2">CEO</div>
 								</div>
 								<p class="text-base-content/80 italic">
-									"Excellent service with a consultative approach. It felt like working with a partner
-									and
-									not a freelancer. Bob's work exceeded expectations with unparalleled
-									professionalism."
+									"Excellent service with a consultative approach. It felt like working with a partner and
+									not a freelancer. Bob's work exceeded expectations with unparalleled professionalism."
 								</p>
 							</div>
 						</div>
@@ -367,8 +325,7 @@ if (!isset($_SESSION['csrf_token'])) {
 								</div>
 								<p class="text-base-content/80 italic">
 									"Bob clearly knows his stuff. A few hours of his time will definitely pay dividends.
-									I
-									recommend all people looking to raise funds to have a chat with Bob."
+									I recommend all people looking to raise funds to have a chat with Bob."
 								</p>
 							</div>
 						</div>
