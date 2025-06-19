@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <!--#include virtual="make-request.fragment.html" -->
         <!--#else -->
             <!--#set var="requested_on" value="<?php echo $requested_on ?>" -->
-            <!--#include virtual="request-success.fragment.html" -->
+            <!--#include virtual="success-request.fragment.html" -->
         <!--#endif -->
         
 
