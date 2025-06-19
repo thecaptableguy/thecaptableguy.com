@@ -31,7 +31,7 @@ if (!isset($_SESSION['csrf_token'])) {
             <div class="max-w-4xl mx-auto">
                 <!-- Blog Post Header -->
                 <div class="text-center mb-16">
-                    <div class="badge badge-outline badge-accent mb-4">Cap Table Structure</div>
+                    <div class="badge badge-outline badge-accent mb-4">Cap Table Fundamentals</div>
                     <h1 class="text-4xl lg:text-5xl font-bold text-primary mb-6">
                         The Anatomy of a Clean Cap Table — What Investors Want to See
                     </h1>
