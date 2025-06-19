@@ -40,7 +40,8 @@ if (!isset($_SESSION['csrf_token'])) {
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <!-- Blog Post 1 -->
+
+                    <!-- Blog Post /blog/cap-table-anatomy/ -->
                     <article class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300 group">
                         <a href="/blog/cap-table-anatomy/" class="card-body p-8 block">
                             <div class="badge badge-outline badge-accent mb-4">Cap Table Fundamentals</div>
@@ -57,25 +58,8 @@ if (!isset($_SESSION['csrf_token'])) {
                         </a>
                     </article>
 
-                <!-- Blog Post 1 -->
-                    <article class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300 group">
-                        <a href="/blog/most-expensive-mistakes/" class="card-body p-8 block">
-                            <div class="badge badge-outline badge-accent mb-4">Cap Table Strategy</div>
-                            <h2 class="card-title text-xl mb-2 group-hover:text-primary transition-colors">
-                                The Most Expensive Cap Table Mistakes I've Seen — And How to Avoid Them
-                            </h2>
-                            <span class="text-sm text-base-content/50 mb-4 block">By Bob Gillespie</span>
-                            <p class="text-base-content/70 mb-6">
-                                Real-world examples of cap table errors that have cost companies millions, and the
-                                practical steps you can take to avoid them.
-                            </p>
-                            <div
-                                class="text-xs text-black mt-2 hover:text-secondary hover:translate-x-3 hover:scale-105 hover:font-bold transition-all duration-300 ease-out">
-                                Click to read more →</div>
-                        </a>
-                    </article>
 
-                    <!-- Blog Post 2 -->
+                    <!-- Blog Post /blog/understanding-cap-tables/ -->
                     <article class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300 group">
                         <a href="/blog/understanding-cap-tables/" class="card-body p-8 block">
                             <div class="badge badge-outline badge-accent mb-4">Cap Table Fundamentals</div>
@@ -93,7 +77,25 @@ if (!isset($_SESSION['csrf_token'])) {
                         </a>
                     </article>
 
-                    <!-- Blog Post 3 -->
+                <!-- Blog Post /blog/most-expensive-mistakes/ -->
+                    <article class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300 group">
+                        <a href="/blog/most-expensive-mistakes/" class="card-body p-8 block">
+                            <div class="badge badge-outline badge-accent mb-4">Cap Table Strategy</div>
+                            <h2 class="card-title text-xl mb-2 group-hover:text-primary transition-colors">
+                                The Most Expensive Cap Table Mistakes I've Seen — And How to Avoid Them
+                            </h2>
+                            <span class="text-sm text-base-content/50 mb-4 block">By Bob Gillespie</span>
+                            <p class="text-base-content/70 mb-6">
+                                Real-world examples of cap table errors that have cost companies millions, and the
+                                practical steps you can take to avoid them.
+                            </p>
+                            <div
+                                class="text-xs text-black mt-2 hover:text-secondary hover:translate-x-3 hover:scale-105 hover:font-bold transition-all duration-300 ease-out">
+                                Click to read more →</div>
+                        </a>
+                    </article>
+
+                    <!-- Blog Post /blog/six-cap-table-mistakes/ -->
                     <article class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300 group">
                         <a href="/blog/six-cap-table-mistakes/" class="card-body p-8 block">
                             <div class="badge badge-outline badge-accent mb-4">Cap Table Strategy</div>
@@ -111,7 +113,7 @@ if (!isset($_SESSION['csrf_token'])) {
                         </a>
                     </article>
 
-                    <!-- Blog Post 4 -->
+                    <!-- Blog Post /blog/option-pools-dilution/ -->
                     <article class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300 group">
                         <a href="/blog/option-pools-dilution/" class="card-body p-8 block">
                             <div class="badge badge-outline badge-accent mb-4">Cap Table Strategy</div>
@@ -129,7 +131,7 @@ if (!isset($_SESSION['csrf_token'])) {
                         </a>
                     </article>
 
-                    <!-- Blog Post 5 -->
+                    <!-- Blog Post /blog/safe-pre-post-money/ -->
                     <article class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300 group">
                         <a href="/blog/safe-pre-post-money/" class="card-body p-8 block">
                             <div class="badge badge-outline badge-accent mb-4">Cap Table Strategy</div>
@@ -147,12 +149,12 @@ if (!isset($_SESSION['csrf_token'])) {
                         </a>
                     </article>
                 </div>
+                
+                <!-- Contact Section -->
+                <!--#set var='csrf_token' value="<?php echo $_SESSION['csrf_token']; ?>" -->
+                <!--#include virtual="/fragments/html/contact-form-full.fragment.html" -->
+                
             </div>
-            
-			<!-- Contact Section -->
-			<!--#set var='csrf_token' value="<?php echo $_SESSION['csrf_token']; ?>" -->
-			<!--#include virtual="/fragments/html/contact-form-full.fragment.html" -->
-            
         </main>
 
 		<!-- Footer -->

@@ -15,37 +15,19 @@ if (!isset($_SESSION['csrf_token'])) {
         <link rel="canonical" href="https://www.captableexpert.com/blog/understanding-cap-tables/" />
         <link rel="shortcut icon" href="/static/favicon.png" type="image/png">
         <link rel="stylesheet" href="/static/styles.css">
+
+        <!--#include virtual="/fragments/og/blog-understanding-cap-tables.og.html" -->
+		<!--#include virtual="/fragments/strd/blog-understanding-cap-tables.strd.html" -->
+
     </head>
 
     <body>
-        <!-- Navigation -->
-        <header class="navbar bg-base-100 border-b border-base-300">
-            <nav class="navbar-start">
-                <div class="flex items-center gap-3">
-                    <div class="avatar">
-                        <div class="size-16 rounded">
-                            <img src="/static/logo.webp" alt="Cap Table Expert Logo"
-                                class="w-full h-full object-contain">
-                        </div>
-                    </div>
-                    <div>
-                        <div class="text-lg font-semibold text-base-content">Bob Gillespie</div>
-                        <div class="text-xs text-base-content/60">Cap Table Specialist - Consultancy Services</div>
-                    </div>
-                </div>
-            </nav>
-            <nav class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal px-1 text-sm">
-                    <li><a href="/about/" class="text-base-content/70 hover:text-primary">About</a></li>
-                    <li><a href="/blog/" class="text-base-content/70 hover:text-primary">Blog</a></li>
-                </ul>
-            </nav>
-            <nav class="navbar-end">
-                <a href="#contact" class="btn btn-accent btn-sm font-bold">Free Consultation</a>
-            </nav>
-        </header>
 
-        <main class="container mx-auto px-6 py-16">
+    <!-- Header -->
+	<!--#set var="header_cta" value="free_call" -->
+	<!--#include virtual="/fragments/html/header-global.fragment.html" -->
+
+    <main class="container mx-auto px-6 py-16">
             <div class="max-w-4xl mx-auto">
                 <!-- Blog Post Header -->
                 <div class="text-center mb-16">
@@ -319,66 +301,14 @@ if (!isset($_SESSION['csrf_token'])) {
             </div>
         </main>
 
+
         <!-- Contact Section -->
-        <section id="contact" class="bg-primary text-primary-content py-20">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-4xl font-bold mb-6">
-                    Get Expert Cap Table Guidance
-                </h2>
-                <p class="text-xl mb-12 text-primary-content/90 max-w-3xl mx-auto">
-                    Send Bob a message. He will get back to you promptly
-                </p>
+        <!--#set var='csrf_token' value="<?php echo $_SESSION['csrf_token']; ?>" -->
+        <!--#include virtual="/fragments/html/contact-form-full.fragment.html" -->
 
-                <div class="max-w-lg mx-auto">
-                    <div class="card bg-base-100 text-base-content shadow-2xl">
-                        <div class="card-body">
-                            <h3 class="card-title justify-center text-2xl mb-6 text-base-content">
-                                Message Bob
-                            </h3>
+		<!-- Footer -->
+	    <!--#include virtual="/fragments/html/footer-global.fragment.html" -->
 
-                            <form id="message" method="POST" action="/contact/opvmghihjeo.php" class="space-y-4">
-                                <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" />
-
-                                <input type="text" name="name" placeholder="Your name..."
-                                    class="input input-lg w-full placeholder:text-base-300" />
-
-                                <input type="email" name="email" placeholder="Your email address.."
-                                    class="input input-lg w-full placeholder:text-base-300" required />
-
-                                <textarea name="message" class="textarea textarea-lg w-full placeholder:text-base-300"
-                                    rows="4" placeholder="Tell us about your cap table needs..."></textarea>
-
-                                <button type="submit" class="btn btn-outline btn-accent btn-lg btn-block">
-                                    Send Message
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer footer-center bg-base-200 text-base-content p-10">
-            <div>
-                <div class="avatar">
-                    <div class="size-28 rounded">
-                        <img src="/static/logo.webp" alt="Cap Table Expert Logo" class="w-full h-full object-contain">
-                    </div>
-                </div>
-                <p class="font-bold text-lg text-base-content">Bob Gillespie</p>
-                <p class="text-base-content/70">Cap Table Expert • Helping startups since 2008</p>
-            </div>
-            <div>
-                <div class="grid grid-flow-col gap-4">
-                    <a href="/about" class="link link-hover text-base-content/70 hover:text-primary">About</a>
-                    <a href="/blog" class="link link-hover text-base-content/70 hover:text-primary">Blog</a>
-                </div>
-            </div>
-            <div>
-                <p class="text-base-content/60">© 2008-present Bob Gillespie. All rights reserved.</p>
-            </div>
-        </footer>
     </body>
 
 </html>
