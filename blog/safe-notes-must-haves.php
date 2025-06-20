@@ -1,0 +1,179 @@
+<?php
+session_start();
+if (!isset($_SESSION['csrf_token'])) {
+	$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+?>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-theme="bobthere">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Why SAFE Notes Should Always Include Both a Cap and a Discount</title>
+        <link rel="canonical" href="https://www.captableexpert.com/blog/safe-notes-must-haves/" />
+        <link rel="shortcut icon" href="/static/favicon.png" type="image/png">
+        <link rel="stylesheet" href="/static/styles.css">
+
+        <!--#include virtual="/fragments/og/blog-safe-notes-must-haves.og.html" -->
+		<!--#include virtual="/fragments/strd/blog-safe-notes-must-haves.strd.html" -->
+
+    </head>
+
+    <body>
+
+    <!-- Header -->
+	<!--#set var="header_cta" value="free_call" -->
+	<!--#include virtual="/fragments/html/header-global.fragment.html" -->
+
+    <main class="container mx-auto px-6 py-16">
+            <div class="max-w-4xl mx-auto">
+                <!-- Blog Post Header -->
+                <div class="text-center mb-16">
+                    <div class="badge badge-outline badge-accent mb-4">SAFE Notes</div>
+                    <h1 class="text-4xl lg:text-5xl font-bold text-primary mb-6">
+                        Why SAFE Notes Should Always Include Both a Cap and a Discount
+                    </h1>
+                    <p class="text-xl text-base-content/70 max-w-3xl mx-auto mb-8">
+                        Creating proper alignment between founders and early investors through fair SAFE note structures that protect both upside potential and downside risk.
+                    </p>
+                    <div class="flex items-center justify-center gap-4 text-sm text-base-content/50">
+                        <span>By Bob Gillespie</span>
+                        <span>•</span>
+                        <span>Cap Table Expert</span>
+                    </div>
+                </div>
+
+                <!-- Blog Post Content -->
+                <div class="prose prose-lg max-w-none">
+                    <section class="mb-12">
+                        <h2 class="text-3xl font-bold text-primary mb-6">Introduction</h2>
+                        <p class="text-lg text-base-content/80 leading-relaxed mb-6">
+                            In early-stage investing, alignment is everything. Founders want capital to build, and investors want to be compensated for the risks they're taking. That's the implicit promise of a SAFE note: a simple agreement that defers valuation to the next priced round, while giving early believers a better deal.
+                        </p>
+                        <p class="text-lg text-base-content/80 leading-relaxed mb-6">
+                            But not all SAFEs are created equal—I think the best ones include both a valuation cap and a discount.
+                        </p>
+                        <p class="text-lg text-base-content/80 leading-relaxed">
+                            Let's unpack why.
+                        </p>
+                    </section>
+
+                    <section class="mb-12">
+                        <h2 class="text-3xl font-bold text-primary mb-6">The Cap: Aligning on the Upside</h2>
+                        <p class="text-lg text-base-content/80 leading-relaxed mb-6">
+                            A valuation cap sets the maximum price at which a SAFE will convert into equity. If things go well—if the startup raises at a high valuation, early investors still convert at a more favorable price.
+                        </p>
+                        
+                        <div class="alert alert-info mb-8">
+                            <div>
+                                <div class="flex items-center gap-3 mb-3">
+                                    <span class="text-2xl">🎯</span>
+                                    <h4 class="font-bold text-lg">Why it matters</h4>
+                                </div>
+                                <p class="text-base-content/80">The cap aligns the investor with the founder on the upside. It rewards conviction when others weren't yet convinced.</p>
+                            </div>
+                        </div>
+
+                        <p class="text-lg text-base-content/80 leading-relaxed mb-6">
+                            Without a cap, a $250K SAFE investor might end up converting at the same valuation as a $10M Series A investor, despite taking exponentially more risk. That's not alignment—it's a penalty for being early.
+                        </p>
+                        <p class="text-lg text-base-content/80 leading-relaxed">
+                            If the company raises at a $10M valuation vs. a $100M valuation, without a cap, the investor gets the same return regardless.
+                        </p>
+                    </section>
+
+                    <section class="mb-12">
+                        <h2 class="text-3xl font-bold text-primary mb-6">The Discount: Protecting the Downside</h2>
+                        <p class="text-lg text-base-content/80 leading-relaxed mb-6">
+                            The discount gives investors equity at a percentage below the next round's price—20% is pretty standard. It acts as a risk premium, compensating for early capital in scenarios where the startup doesn't hockey-stick but makes enough meaningful progress to raise a priced round.
+                        </p>
+
+                        <div class="alert alert-warning mb-8">
+                            <div>
+                                <div class="flex items-center gap-3 mb-3">
+                                    <span class="text-2xl">⚖️</span>
+                                    <h4 class="font-bold text-lg">Why it matters</h4>
+                                </div>
+                                <p class="text-base-content/80">Not every startup raises at a $100M valuation. Many raise flat, or with only modest gains. In these middle-of-the-road outcomes, the discount is the only way early investors are compensated for their risk.</p>
+                            </div>
+                        </div>
+
+                        <p class="text-lg text-base-content/80 leading-relaxed">
+                            Without a discount, an investor might fund a company at napkin stage and then still pay the same price as a new investor who comes in much later investors. That's misaligned and unjustified.
+                        </p>
+                    </section>
+
+                    <section class="mb-12">
+                        <h2 class="text-3xl font-bold text-primary mb-6">Both = Fairness Across the Spectrum</h2>
+                        <p class="text-lg text-base-content/80 leading-relaxed mb-6">
+                            Including both a cap and a discount ensures the investor is protected on the downside, fairly rewarded in middling outcomes, and appropriately aligned on the upside.
+                        </p>
+                        <p class="text-lg text-base-content/80 leading-relaxed mb-6">
+                            It avoids two traps:
+                        </p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6 mb-8">
+                            <div class="alert alert-error">
+                                <div>
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <span class="text-2xl">📈</span>
+                                        <h4 class="font-bold text-lg">Cap-only SAFEs</h4>
+                                    </div>
+                                    <p class="text-base-content/80">Great if the company 10x's in valuation, but offer no compensation if the next round is flat or slightly up.</p>
+                                </div>
+                            </div>
+                            <div class="alert alert-error">
+                                <div>
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <span class="text-2xl">📉</span>
+                                        <h4 class="font-bold text-lg">Discount-only SAFEs</h4>
+                                    </div>
+                                    <p class="text-base-content/80">Fine for modest outcomes, but completely miss out on the upside if the startup takes off.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-lg text-base-content/80 leading-relaxed">
+                            In short, a SAFE with both a cap and discount offers a complete picture of risk and reward.
+                        </p>
+                    </section>
+
+                    <section class="mb-12">
+                        <h2 class="text-3xl font-bold text-primary mb-6">Founders: This Isn't a Giveaway</h2>
+                        <p class="text-lg text-base-content/80 leading-relaxed mb-6">
+                            Some founders worry that including both terms is giving away too much, but only one of the conversion terms will be used upon conversion, proving appropriate risk/reward profile for early investors.
+                        </p>
+                        <p class="text-lg text-base-content/80 leading-relaxed">
+                            A cap + discount SAFE isn't overly generous. It's a fair deal that reflects risk and aligns incentives—and aligned incentives build enduring partnerships.
+                        </p>
+                    </section>
+
+                    <section class="mb-12">
+                        <h2 class="text-3xl font-bold text-primary mb-6">Conclusion: SAFE, Not Sorry</h2>
+                        <p class="text-lg text-base-content/80 leading-relaxed mb-6">
+                            A SAFE note should be just that: safe for founders to raise and fair for investors to fund. The cap rewards belief in the upside. The discount protects the risk taken. Together, they create a structure that honors the journey, no matter where it leads.
+                        </p>
+                        <p class="text-lg text-base-content/80 leading-relaxed mb-6">
+                            Having a SAFE with both a cap and discount provides better alignment with your investors.
+                        </p>
+                        <p class="text-lg text-base-content/80 leading-relaxed">
+                            If you'd like to connect with Bob to discuss your fund raising strategy, you can connect with him below – because
+                            <span class="text-xl font-bold text-secondary">every point matters.</span>
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!-- Contact Section -->
+        <!--#set var='csrf_token' value="<?php echo $_SESSION['csrf_token']; ?>" -->
+        <!--#include virtual="/fragments/html/contact-form-full.fragment.html" -->
+
+		<!-- Footer -->
+	    <!--#include virtual="/fragments/html/footer-global.fragment.html" -->
+
+    </body>
+
+</html>

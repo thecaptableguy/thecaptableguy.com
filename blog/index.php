@@ -148,6 +148,23 @@ if (!isset($_SESSION['csrf_token'])) {
                                 Click to read more →</div>
                         </a>
                     </article>
+
+                    <!-- Blog Post /blog/safe-notes-must-haves/ -->
+                    <article class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300 group">
+                        <a href="/blog/safe-notes-must-haves/" class="card-body p-8 block">
+                            <div class="badge badge-outline badge-accent mb-4">SAFE Notes</div>
+                            <h2 class="card-title text-xl mb-2 group-hover:text-primary transition-colors">
+                                Why SAFE Notes Should Always Include Both a Cap and a Discount
+                            </h2>
+                            <span class="text-sm text-base-content/50 mb-4 block">By Bob Gillespie</span>
+                            <p class="text-base-content/70 mb-6">
+                                Creating proper alignment between founders and early investors through fair SAFE note structures that protect both upside potential and downside risk.
+                            </p>
+                            <div
+                                class="text-xs text-black mt-2 hover:text-secondary hover:translate-x-3 hover:scale-105 hover:font-bold transition-all duration-300 ease-out">
+                                Click to read more →</div>
+                        </a>
+                    </article>
                 </div>
             </div>
         </main>
