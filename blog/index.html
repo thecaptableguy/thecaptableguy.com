@@ -1,9 +1,3 @@
-<?php
-session_start();
-if (!isset($_SESSION['csrf_token'])) {
-	$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-}
-?>
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth" data-theme="bobthere">
 
@@ -152,7 +146,7 @@ if (!isset($_SESSION['csrf_token'])) {
                     <!-- Blog Post /blog/safe-notes-must-haves/ -->
                     <article class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300 group">
                         <a href="/blog/safe-notes-must-haves/" class="card-body p-8 block">
-                            <div class="badge badge-outline badge-accent mb-4">SAFE Notes</div>
+                            <div class="badge badge-outline badge-accent mb-4">Expert Opinion</div>
                             <h2 class="card-title text-xl mb-2 group-hover:text-primary transition-colors">
                                 Why SAFE Notes Should Always Include Both a Cap and a Discount
                             </h2>
@@ -168,13 +162,9 @@ if (!isset($_SESSION['csrf_token'])) {
                 </div>
             </div>
         </main>
-                    
-                    <!-- Contact Section -->
-                    <!--#set var='csrf_token' value="<?php echo $_SESSION['csrf_token']; ?>" -->
-                    <!--#include virtual="/fragments/html/contact-form-full.fragment.html" --> 
-                    
-                    <!-- Footer -->
-                    <!--#include virtual="/fragments/html/footer-global.fragment.html" -->
+
+        <!-- Footer -->
+        <!--#include virtual="/fragments/html/footer-global.fragment.html" -->
 
     </body>
 

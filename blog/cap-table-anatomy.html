@@ -1,9 +1,3 @@
-<?php
-session_start();
-if (!isset($_SESSION['csrf_token'])) {
-	$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-}
-?>
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth" data-theme="bobthere">
 
@@ -17,15 +11,15 @@ if (!isset($_SESSION['csrf_token'])) {
         <link rel="stylesheet" href="/static/styles.css">
 
         <!--#include virtual="/fragments/og/blog-cap-table-anatomy.og.html" -->
-		<!--#include virtual="/fragments/strd/blog-cap-table-anatomy.strd.html" -->
+        <!--#include virtual="/fragments/strd/blog-cap-table-anatomy.strd.html" -->
 
     </head>
 
     <body>
 
         <!-- Header -->
-		<!--#set var="header_cta" value="free_call" -->
-		<!--#include virtual="/fragments/html/header-global.fragment.html" -->
+        <!--#set var="header_cta" value="free_call" -->
+        <!--#include virtual="/fragments/html/header-global.fragment.html" -->
 
         <main class="container mx-auto px-6 py-16">
             <div class="max-w-4xl mx-auto">
@@ -36,7 +30,8 @@ if (!isset($_SESSION['csrf_token'])) {
                         The Anatomy of a Clean Cap Table — What Investors Want to See
                     </h1>
                     <p class="text-xl text-base-content/70 max-w-3xl mx-auto mb-8">
-                        A comprehensive guide to building and maintaining a clean cap table that signals professionalism and attracts investors.
+                        A comprehensive guide to building and maintaining a clean cap table that signals professionalism
+                        and attracts investors.
                     </p>
                     <div class="flex items-center justify-center gap-4 text-sm text-base-content/50">
                         <span>By Bob Gillespie</span>
@@ -50,13 +45,17 @@ if (!isset($_SESSION['csrf_token'])) {
                     <section class="mb-12">
                         <h2 class="text-3xl font-bold text-primary mb-6">Introduction</h2>
                         <p class="text-lg text-base-content/80 leading-relaxed mb-6">
-                            If you're planning to raise capital, your pitch deck isn't the only thing under scrutiny. One of the first things a serious investor will ask for is your cap table — and how clean it is will shape how much confidence they have in you as a founder.
+                            If you're planning to raise capital, your pitch deck isn't the only thing under scrutiny.
+                            One of the first things a serious investor will ask for is your cap table — and how clean it
+                            is will shape how much confidence they have in you as a founder.
                         </p>
                         <p class="text-lg text-base-content/80 leading-relaxed mb-6">
-                            A messy, over-complicated, or opaque cap table can kill deals or delay closings. A clean one can signal professionalism, clarity, and execution — even if you're still early-stage.
+                            A messy, over-complicated, or opaque cap table can kill deals or delay closings. A clean one
+                            can signal professionalism, clarity, and execution — even if you're still early-stage.
                         </p>
                         <p class="text-lg text-base-content/80 leading-relaxed">
-                            Here's what a clean cap table looks like, why it matters, and what investors are really looking for when they open it up.
+                            Here's what a clean cap table looks like, why it matters, and what investors are really
+                            looking for when they open it up.
                         </p>
                     </section>
 
@@ -72,7 +71,8 @@ if (!isset($_SESSION['csrf_token'])) {
                                         <span class="text-2xl">✅</span>
                                         <h4 class="font-bold text-lg">Accurate</h4>
                                     </div>
-                                    <p class="text-base-content/80">Reflects all outstanding shares, options, and convertibles</p>
+                                    <p class="text-base-content/80">Reflects all outstanding shares, options, and
+                                        convertibles</p>
                                 </div>
                             </div>
                             <div class="alert">
@@ -81,7 +81,8 @@ if (!isset($_SESSION['csrf_token'])) {
                                         <span class="text-2xl">🎯</span>
                                         <h4 class="font-bold text-lg">Simple</h4>
                                     </div>
-                                    <p class="text-base-content/80">Understandable at a glance, not bloated with early errors</p>
+                                    <p class="text-base-content/80">Understandable at a glance, not bloated with early
+                                        errors</p>
                                 </div>
                             </div>
                             <div class="alert">
@@ -90,7 +91,8 @@ if (!isset($_SESSION['csrf_token'])) {
                                         <span class="text-2xl">📊</span>
                                         <h4 class="font-bold text-lg">Structured</h4>
                                     </div>
-                                    <p class="text-base-content/80">Properly organized by shareholder, security type, and class</p>
+                                    <p class="text-base-content/80">Properly organized by shareholder, security type,
+                                        and class</p>
                                 </div>
                             </div>
                             <div class="alert">
@@ -104,7 +106,8 @@ if (!isset($_SESSION['csrf_token'])) {
                             </div>
                         </div>
                         <p class="text-lg text-base-content/80 leading-relaxed">
-                            In other words, it shows a well-run company that respects ownership — which is ultimately what investors are buying into.
+                            In other words, it shows a well-run company that respects ownership — which is ultimately
+                            what investors are buying into.
                         </p>
                     </section>
 
@@ -138,7 +141,8 @@ if (!isset($_SESSION['csrf_token'])) {
                                         <span class="text-2xl">💥</span>
                                         <h4 class="font-bold text-lg">Dilution Impact</h4>
                                     </div>
-                                    <p class="text-base-content/80">How much dilution is coming from SAFEs, option pools, or debts</p>
+                                    <p class="text-base-content/80">How much dilution is coming from SAFEs, option
+                                        pools, or debts</p>
                                 </div>
                             </div>
                             <div class="alert">
@@ -147,12 +151,14 @@ if (!isset($_SESSION['csrf_token'])) {
                                         <span class="text-2xl">🚩</span>
                                         <h4 class="font-bold text-lg">Red Flags</h4>
                                     </div>
-                                    <p class="text-base-content/80">Dead equity, unresolved grants, or unconverted notes</p>
+                                    <p class="text-base-content/80">Dead equity, unresolved grants, or unconverted notes
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <p class="text-lg text-base-content/80 leading-relaxed">
-                            If they sense confusion, undocumented promises, or structural complexity — they'll often pause, negotiate harder, or walk away.
+                            If they sense confusion, undocumented promises, or structural complexity — they'll often
+                            pause, negotiate harder, or walk away.
                         </p>
                     </section>
 
@@ -167,12 +173,14 @@ if (!isset($_SESSION['csrf_token'])) {
                             <div class="card-body p-8">
                                 <h3 class="text-2xl font-bold text-accent mb-4">1. Founders With Vesting in Place</h3>
                                 <p class="text-base-content/80 leading-relaxed mb-6">
-                                    Founders should have standard vesting (typically 4 years with a 1-year cliff). This shows long-term commitment and prevents dead equity.
+                                    Founders should have standard vesting (typically 4 years with a 1-year cliff). This
+                                    shows long-term commitment and prevents dead equity.
                                 </p>
                                 <div class="alert alert-error alert-outline">
                                     <div>
                                         <h4 class="text-error font-bold text-lg mb-2">Red flag:</h4>
-                                        <p class="text-base-content/80">Fully vested founders with large ownership stakes who are no longer involved.</p>
+                                        <p class="text-base-content/80">Fully vested founders with large ownership
+                                            stakes who are no longer involved.</p>
                                     </div>
                                 </div>
                             </div>
@@ -183,12 +191,14 @@ if (!isset($_SESSION['csrf_token'])) {
                             <div class="card-body p-8">
                                 <h3 class="text-2xl font-bold text-accent mb-4">2. An Option Pool That Makes Sense</h3>
                                 <p class="text-base-content/80 leading-relaxed mb-6">
-                                    You've reserved a reasonable portion (usually 10–20%) of equity for employees — but haven't bloated it just to meet investor expectations.
+                                    You've reserved a reasonable portion (usually 10–20%) of equity for employees — but
+                                    haven't bloated it just to meet investor expectations.
                                 </p>
                                 <div class="alert alert-error alert-outline">
                                     <div>
                                         <h4 class="text-error font-bold text-lg mb-2">Red flag:</h4>
-                                        <p class="text-base-content/80">Investors requiring a large pre-money pool expansion that dilutes founders too much.</p>
+                                        <p class="text-base-content/80">Investors requiring a large pre-money pool
+                                            expansion that dilutes founders too much.</p>
                                     </div>
                                 </div>
                             </div>
@@ -197,14 +207,17 @@ if (!isset($_SESSION['csrf_token'])) {
                         <!-- Element 3 -->
                         <div class="card bg-base-100 shadow-sm border border-base-300 mb-8">
                             <div class="card-body p-8">
-                                <h3 class="text-2xl font-bold text-accent mb-4">3. SAFEs and Convertible Notes Clearly Modeled</h3>
+                                <h3 class="text-2xl font-bold text-accent mb-4">3. SAFEs and Convertible Notes Clearly
+                                    Modeled</h3>
                                 <p class="text-base-content/80 leading-relaxed mb-6">
-                                    You can show how existing SAFEs/notes will convert in the next round — and what the fully diluted ownership will look like post-close.
+                                    You can show how existing SAFEs/notes will convert in the next round — and what the
+                                    fully diluted ownership will look like post-close.
                                 </p>
                                 <div class="alert alert-error alert-outline">
                                     <div>
                                         <h4 class="text-error font-bold text-lg mb-2">Red flag:</h4>
-                                        <p class="text-base-content/80">Multiple overlapping SAFEs with inconsistent terms (e.g. high caps, low caps, no caps) and no conversion modeling.</p>
+                                        <p class="text-base-content/80">Multiple overlapping SAFEs with inconsistent
+                                            terms (e.g. high caps, low caps, no caps) and no conversion modeling.</p>
                                     </div>
                                 </div>
                             </div>
@@ -213,14 +226,18 @@ if (!isset($_SESSION['csrf_token'])) {
                         <!-- Element 4 -->
                         <div class="card bg-base-100 shadow-sm border border-base-300 mb-8">
                             <div class="card-body p-8">
-                                <h3 class="text-2xl font-bold text-accent mb-4">4. One Class of Common Stock (Until Priced Rounds)</h3>
+                                <h3 class="text-2xl font-bold text-accent mb-4">4. One Class of Common Stock (Until
+                                    Priced Rounds)</h3>
                                 <p class="text-base-content/80 leading-relaxed mb-6">
-                                    At the seed stage, most companies should have a single class of common shares. Once you raise a priced round, preferred shares may come in — but keep it simple as long as possible.
+                                    At the seed stage, most companies should have a single class of common shares. Once
+                                    you raise a priced round, preferred shares may come in — but keep it simple as long
+                                    as possible.
                                 </p>
                                 <div class="alert alert-error alert-outline">
                                     <div>
                                         <h4 class="text-error font-bold text-lg mb-2">Red flag:</h4>
-                                        <p class="text-base-content/80">Early startups with multiple share classes, complex option structures, or exotic grants.</p>
+                                        <p class="text-base-content/80">Early startups with multiple share classes,
+                                            complex option structures, or exotic grants.</p>
                                     </div>
                                 </div>
                             </div>
@@ -229,14 +246,17 @@ if (!isset($_SESSION['csrf_token'])) {
                         <!-- Element 5 -->
                         <div class="card bg-base-100 shadow-sm border border-base-300 mb-8">
                             <div class="card-body p-8">
-                                <h3 class="text-2xl font-bold text-accent mb-4">5. All Grants Documented — No Verbal Promises</h3>
+                                <h3 class="text-2xl font-bold text-accent mb-4">5. All Grants Documented — No Verbal
+                                    Promises</h3>
                                 <p class="text-base-content/80 leading-relaxed mb-6">
-                                    Every equity grant, whether to founders, employees, or advisors, should be signed and reflected in the cap table.
+                                    Every equity grant, whether to founders, employees, or advisors, should be signed
+                                    and reflected in the cap table.
                                 </p>
                                 <div class="alert alert-error alert-outline">
                                     <div>
                                         <h4 class="text-error font-bold text-lg mb-2">Red flag:</h4>
-                                        <p class="text-base-content/80">"I promised this person some equity, but we never did the paperwork."</p>
+                                        <p class="text-base-content/80">"I promised this person some equity, but we
+                                            never did the paperwork."</p>
                                     </div>
                                 </div>
                             </div>
@@ -247,12 +267,14 @@ if (!isset($_SESSION['csrf_token'])) {
                             <div class="card-body p-8">
                                 <h3 class="text-2xl font-bold text-accent mb-4">6. A Clear Fully Diluted Picture</h3>
                                 <p class="text-base-content/80 leading-relaxed mb-6">
-                                    You should be able to instantly show what your cap table looks like on a fully diluted basis — including all SAFEs, options, and convertibles.
+                                    You should be able to instantly show what your cap table looks like on a fully
+                                    diluted basis — including all SAFEs, options, and convertibles.
                                 </p>
                                 <div class="alert alert-error alert-outline">
                                     <div>
                                         <h4 class="text-error font-bold text-lg mb-2">Red flag:</h4>
-                                        <p class="text-base-content/80">Founders who only show ownership as-is, without modeling the full post-money impact of fundraising.</p>
+                                        <p class="text-base-content/80">Founders who only show ownership as-is, without
+                                            modeling the full post-money impact of fundraising.</p>
                                     </div>
                                 </div>
                             </div>
@@ -262,7 +284,8 @@ if (!isset($_SESSION['csrf_token'])) {
                     <section class="mb-12">
                         <h2 class="text-3xl font-bold text-primary mb-6">How to Clean Up a Messy Cap Table</h2>
                         <p class="text-lg text-base-content/80 leading-relaxed mb-6">
-                            Even if your cap table is messy now, it's fixable. Here's how to clean it up before your next raise:
+                            Even if your cap table is messy now, it's fixable. Here's how to clean it up before your
+                            next raise:
                         </p>
                         <div class="alert">
                             <div>
@@ -280,28 +303,29 @@ if (!isset($_SESSION['csrf_token'])) {
                     <section class="mb-12">
                         <h2 class="text-3xl font-bold text-primary mb-6">Final Thoughts</h2>
                         <p class="text-lg text-base-content/80 leading-relaxed mb-6">
-                            Your cap table is your company. It's the source of truth for who owns what — and who stands to gain if you succeed.
+                            Your cap table is your company. It's the source of truth for who owns what — and who stands
+                            to gain if you succeed.
                         </p>
                         <p class="text-lg text-base-content/80 leading-relaxed mb-6">
-                            Founders who take the time to manage their equity structure thoughtfully earn more trust from investors, retain more ownership, and make better long-term decisions.
+                            Founders who take the time to manage their equity structure thoughtfully earn more trust
+                            from investors, retain more ownership, and make better long-term decisions.
                         </p>
                         <p class="text-lg text-base-content/80 leading-relaxed mb-6">
-                            So before you send out that pitch deck, open your cap table. Clean it up. Understand it fully. And own the story it tells.
+                            So before you send out that pitch deck, open your cap table. Clean it up. Understand it
+                            fully. And own the story it tells.
                         </p>
                         <p class="text-lg text-base-content/80 leading-relaxed">
-                            Need help reviewing or modeling your cap table? Bob helps founders get investor-ready. Connect with him below – because <span class="text-xl font-bold text-secondary">every point matters.</span>
+                            Need help reviewing or modeling your cap table? Bob helps founders get investor-ready.
+                            Connect with him below – because <span class="text-xl font-bold text-secondary">every point
+                                matters.</span>
                         </p>
                     </section>
                 </div>
             </div>
         </main>
 
-        <!-- Contact Section -->
-        <!--#set var='csrf_token' value="<?php echo $_SESSION['csrf_token']; ?>" -->
-        <!--#include virtual="/fragments/html/contact-form-full.fragment.html" -->
-
-		<!-- Footer -->
-	    <!--#include virtual="/fragments/html/footer-global.fragment.html" -->
+        <!-- Footer -->
+        <!--#include virtual="/fragments/html/footer-global.fragment.html" -->
 
     </body>
 
