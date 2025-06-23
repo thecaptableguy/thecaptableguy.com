@@ -1,18 +1,7 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
 Sitemap: https://www.captableexpert.com/sitemap.xml
-
-# Disallow specific files/directories
-Disallow: /contact/error_log
-Disallow: /contact/*.php
-Disallow: *.md
-
-# Allow important directories
-Allow: /static/
-Allow: /blog/
-Allow: /about/
 
 # Crawl-delay (optional - remove if causing issues)
 Crawl-delay: 1

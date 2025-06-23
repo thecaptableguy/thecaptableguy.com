@@ -57,8 +57,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="icon" type="image/png" href="/static/favicon.png" />
     <link href="/static/styles.css" rel="stylesheet" type="text/css" />
 
-    <!--#include virtual="/fragments/og/request-free-call.og.html" -->
-	<!--#include virtual="/fragments/strd/request-free-call.strd.html" -->
+    <!--#include virtual="request-free-call.og.html" -->
+	<!--#include virtual="request-free-call.strd.html" -->
 
 </head>
 
@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <!-- Header -->
     <!--#set var="header_cta" value="home" -->
-    <!--#include virtual="/fragments/html/header-global.fragment.html" -->
+    <!--#include virtual="/fragments/header-global.fragment.html" -->
     
     
     <main>
@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </main>
 
 		<!-- Footer -->
-	    <!--#include virtual="/fragments/html/footer-global.fragment.html" -->
+	    <!--#include virtual="/fragments/footer-global.fragment.html" -->
 
 </body>
 
