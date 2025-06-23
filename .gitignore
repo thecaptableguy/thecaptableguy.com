@@ -1,0 +1,12 @@
+# Mac directories
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# GitHub Pages specific files
+.nojekyll
+CNAME
+
+# GoDaddy error file
+error_log
+.cqnaeo7ig105mg66l9pdte4kng
