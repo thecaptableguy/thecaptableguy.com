@@ -28,59 +28,59 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog Index -->
+  <!-- insights Index -->
   <url>
-    <loc>https://www.captableexpert.com/blog/</loc>
+    <loc>https://www.captableexpert.com/insights/</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Blog Posts - Directory-style URIs (Canonical) -->
+  <!-- insights Posts - Directory-style URIs (Canonical) -->
   <url>
-    <loc>https://www.captableexpert.com/blog/most-expensive-mistakes/</loc>
+    <loc>https://www.captableexpert.com/insights/most-expensive-mistakes/</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.captableexpert.com/blog/understanding-cap-tables/</loc>
+    <loc>https://www.captableexpert.com/insights/understanding-cap-tables/</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.captableexpert.com/blog/six-cap-table-mistakes/</loc>
+    <loc>https://www.captableexpert.com/insights/six-cap-table-mistakes/</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.captableexpert.com/blog/option-pools-dilution/</loc>
+    <loc>https://www.captableexpert.com/insights/option-pools-dilution/</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.captableexpert.com/blog/safe-pre-post-money/</loc>
+    <loc>https://www.captableexpert.com/insights/safe-pre-post-money/</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.captableexpert.com/blog/cap-table-anatomy/</loc>
+    <loc>https://www.captableexpert.com/insights/cap-table-anatomy/</loc>
     <lastmod>2025-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.captableexpert.com/blog/safe-notes-must-haves/</loc>
+    <loc>https://www.captableexpert.com/insights/safe-notes-must-haves/</loc>
     <lastmod>2025-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

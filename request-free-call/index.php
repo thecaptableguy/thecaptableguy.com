@@ -50,10 +50,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free One Hour Call - Bob Gillespie Cap Table Expert</title>
+    <title>Free Half Hour Call - Bob Gillespie Cap Table Expert</title>
     <link rel="canonical" href="https://www.captableexpert.com/request-free-call/" />
     <meta name="description"
-        content="Book your free one-hour cap table consultation with Bob Gillespie. Get expert guidance on equity structures, fundraising, and avoid costly cap table mistakes.">
+        content="Book your free half-hour cap table consultation with Bob Gillespie. Get expert guidance on equity structures, fundraising, and avoid costly cap table mistakes.">
     <link rel="icon" type="image/png" href="/static/favicon.png" />
     <link href="/static/styles.css" rel="stylesheet" type="text/css" />
 
