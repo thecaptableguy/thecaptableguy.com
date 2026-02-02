@@ -6,25 +6,7 @@
 	],
 	"settings": {
 		"html.autoClosingTags": false,
-		"github.copilot.chat.codeGeneration.instructions": [
-			{
-				"file": "./.vscode/daisyui.md",
-				"label": "DaisyUI",
-			},
-			{
-				"file": "./.vscode/tailwindcss.md",
-				"label": "Tailwind CSS",
-			}
-		],
-		"mcp": {
-			"servers": {
-			 "Context7": {
-			   "type": "stdio",
-			   "command": "bunx",
-			   "args": ["-y", "@upstash/context7-mcp@latest"]
-			 }
-			}
-		},
+		"github.copilot.chat.codesearch.enabled": true,
 		"chat.mcp.serverSampling": {
 			"captableexpert.com.code-workspace: Context7": {
 				"allowedModels": [

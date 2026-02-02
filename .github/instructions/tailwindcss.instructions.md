@@ -1,3 +1,6 @@
+---
+applyTo: '**/*.{js,jsx,ts,tsx,css,scss,html}'
+---
 # Tailwind CSS 4
 
 > This document provides a comprehensive overview of Tailwind CSS utility classes, examples, and customization options. It covers various CSS properties like layout, spacing, typography, backgrounds, borders, effects, transitions, transforms, and more, explaining how to use Tailwind's utility classes to style web elements effectively and responsively.
