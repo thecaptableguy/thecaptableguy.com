@@ -12,24 +12,47 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $mailto_client = filter_var(trim($_POST['email'] ?? ''), FILTER_VALIDATE_EMAIL);
     $name_client = htmlspecialchars(trim($_POST['name'] ?? ''), ENT_QUOTES, 'UTF-8');
     $message_client = htmlspecialchars(trim($_POST['message'] ?? ''), ENT_QUOTES, 'UTF-8');
+    $is_lead_magnet = isset($_POST['lead_magnet']) && $_POST['lead_magnet'] === 'true';
 
-    if (!$requested_on && $csrf_token_valid && $mailto_client) {
-        
-        $requested_on = $_SESSION['free_call_requested_on'] = date('Y-m-d');
+    if ($csrf_token_valid && $mailto_client) {
 
-        $background_script = __DIR__ . '/background.php';
-        $php_binary = PHP_BINARY;
-        
-        $command = sprintf(
-            '%s %s %s %s %s > /dev/null 2>&1 &',
-            escapeshellarg($php_binary),
-            escapeshellarg($background_script),
-            escapeshellarg($mailto_client),
-            escapeshellarg($name_client),
-            escapeshellarg($message_client)
-        );
-                
-        exec($command);   
+        if ($is_lead_magnet) {
+            // Lead magnet request - redirect to checklist
+            $_SESSION['checklist_requested_on'] = date('Y-m-d');
+
+            $background_script = __DIR__ . '/notify-lead.php';
+            $php_binary = PHP_BINARY;
+
+            $command = sprintf(
+                '%s %s %s %s > /dev/null 2>&1 &',
+                escapeshellarg($php_binary),
+                escapeshellarg($background_script),
+                escapeshellarg($mailto_client),
+                escapeshellarg($name_client)
+            );
+
+            exec($command);
+
+            header('Location: /checklist/');
+            exit;
+        } elseif (!$requested_on) {
+            // Regular consultation request
+            $requested_on = $_SESSION['free_call_requested_on'] = date('Y-m-d');
+
+            $background_script = __DIR__ . '/background.php';
+            $php_binary = PHP_BINARY;
+
+            $command = sprintf(
+                '%s %s %s %s %s > /dev/null 2>&1 &',
+                escapeshellarg($php_binary),
+                escapeshellarg($background_script),
+                escapeshellarg($mailto_client),
+                escapeshellarg($name_client),
+                escapeshellarg($message_client)
+            );
+
+            exec($command);
+        }
     }
 
 } else {
